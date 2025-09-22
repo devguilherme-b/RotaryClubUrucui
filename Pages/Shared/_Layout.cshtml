@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RotaryClubUrucui</title>
+    <title>Rotary Club de Uruçuí</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RotaryClubUrucui.styles.css" asp-append-version="true" />
@@ -11,30 +11,53 @@
 <body>
     <header>
         <h6 class="rotary-year">ANO ROTÁRIO 2025 - 2026 - URUÇUÍ</h6>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand text-light" asp-area="" asp-page="/Index">RotaryClubUrucui</a>
+                <a class="navbar-brand text-light" asp-area="" asp-page="/Index">
+                    <img src="~/Media/Imgs/WHITE-LOGO-ROTARY-CLUB-URUÇUÍ.png" alt="Logo da Rotary Club de Uruçuí." height="50" />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    @* <span class="navbar-toggler-icon"></span> *@
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
-                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(3.55556,3.55556)"><path d="M56,48c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,32c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,16c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0z"></path></g></g>
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none" style="mix-blend-mode: normal"><g transform="scale(3.55556,3.55556)"><path d="M56,48c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,32c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,16c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0z"></path></g></g>
                     </svg>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Home</a>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="navbarSupportedContent">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item-edited">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="home">Início</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index">Quem somos</a></li>
+                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index">Diretoria</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ações</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index">Projetos</a></li>
+                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index">Notícias</a></li>
+                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index">Agenda</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item-edited">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="partners">Parceiros</a>
+                        </li>
+                        <li class="nav-item-edited">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="donate-now">Doe Agora</a>
+                        </li>
+                        <li class="nav-item-edited">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="contacts">Contatos</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    
+    <div class="container-edited">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -42,7 +65,61 @@
 
     <footer class="border-top footer">
         <div class="container">
-            &copy; 2025 - Rotary Club de Urucui. Todos os direitos reservados.</a>
+            <div class="footer-as-secondary-menu">
+                <div class="footer-logo d-flex justify-content-center text-center">
+                    <img height="90" src="~/media/imgs/white-logo-rotary-club-uruçuí.png" alt="logo da rotary club de uruçuí." />
+                </div>
+                <nav class="nav-footer">   
+                    <div class="nav-footer-item">
+                        <p class="nav-link">Sobre</p>
+                        <ul>
+                            <li>
+                                <a class="nav-link text-light" asp-page="/Index">Quem Somos</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-light" asp-area="" asp-page="/Index">Diretoria</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-footer-item">
+                        <p class="nav-link">Ações</p>
+                        <ul>
+                            <li>
+                                <a class="nav-link text-light" asp-page="/Index">Projetos</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-light" asp-area="" asp-page="/Index">Notícias</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-light" asp-area="" asp-page="/Index">Agenda</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-footer-item">
+                        <p class="nav-link">Redes de contato</p>
+                        <ul>
+                            <li>
+                                <a class="nav-link text-light" href="https://www.instagram.com/rotaryclubdeurucui">Instagram</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-light" href="mailto:igordemonteiro19@gmail.com">E-mail</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-footer-item">
+                        <p class="nav-link">Rotary Internacional</p>
+                        <ul>
+                            <li>
+                                <a class="nav-link text-light" href="https://www.rotary.org">rotary.org</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="credits-for-developer" align="right">
+                Desenvolvido por <a href="https://devguilherme.onrender.com/">DEVguilherme</a>
+            </div>
+            <p> &copy; 2025 - Rotary Club de Urucui. Todos os direitos reservados.</p>
         </div>
     </footer>
 

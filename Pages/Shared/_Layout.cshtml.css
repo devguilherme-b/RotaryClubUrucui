@@ -1,32 +1,59 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/*GLobal code*/
+ul {
+    list-style:none;
+    padding:0
+}
+.nav-footer-item p, .credits-for-developer a {
+    color: var(--yellow)
+}
 
-/* My Code*/
-header{
-    padding:0 15px;
+.container-edited {
+    margin-top: calc((100vh / 10) + 2.3vh)
+}
+/*Normal code*/
+.rotary-year {
+    color: var(--dark-blue);
+    align-items: center;
+    text-align: center;
+    font-family: Calibri;
+    font-weight: 700;
+}
+
+header {
+    z-index:100;
+    padding: 7px;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
 }
 
 .navbar {
     background-color: var(--green);
-    border-radius:10px;
+    border-radius: 10px;
+    filter: drop-shadow(2px 3px 6px var(--white))
 }
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+.nav-item-edited {
+    align-content: center
+}
+.nav-item-edited:hover {
+    align-content: center;
+    background-color: var(--purple)
 }
 
-.rotary-year {
-    color: var(--dark-blue);
-    align-items:center;
-    text-align:center;
-    font-family: Calibri;
-    font-weight:700;
+.nav-item a {
+    color: var(--white);
+    text-decoration: none
+}
+.nav-item a:hover {
+    background-color: var(--purple);
+    color: var(--white)
 }
 
-a {
-    color: var(--purple);
+.dropdown-menu {
+    background-color: var(--green);
+    padding:5px
 }
 
 .btn-primary {
@@ -35,34 +62,119 @@ a {
     border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.footer-as-secondary-menu {
+    padding: 4% 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
+.nav-footer, .nav-footer-item {
+    align-items: baseline
 }
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+.nav-footer-item ul li:hover{
+    background-color:var(--yellow)
+}
+.nav-footer-item {
+    all: unset;
+    text-align: left;
+}
+.nav-footer-item ul li a{
+    text-decoration:none
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.credits-for-developer {
+    color: var(--gray)
 }
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+.credits-for-developer a{
+    text-decoration:none
+}
+.credits-for-developer a:hover{
+    text-decoration-line:underline;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
-  background-color: var(--black);
-  color: var(--white);
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 30px;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .footer .nav-link {
+        padding: 0 1rem;
+    }      
+
+    .footer-as-secondary-menu {
+        flex-direction: column;
+    }
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+    .credits-for-developer, .footer .container p {
+        padding: 3rem 0
+    }
+
+    .footer .nav-link {
+        padding: 0 1rem;
+    }
+    .footer-logo{
+        padding: 1rem 0 3rem 0
+    }
+
+    .nav-footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    }
+    .nav-footer-item {
+        all: unset;
+        text-align: center;
+    }
+    
+    .footer-as-secondary-menu {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media (min-width: 769px) {
+    .footer .nav-link {
+        padding: 0 1rem;
+    }
+
+    .nav-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .footer-as-secondary-menu {
+        flex-direction: row;
+    }
+}
+
+/* DESKTOPS */
+@media (min-width: 1024px) {
+    .nav-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+@media (min-width: 1280px) {
+    .footer-as-secondary-menu {
+        justify-content: center;
+        flex-direction: row;
+    }
+}
+@media (min-width: 1280px) {
+    .footer-as-secondary-menu {
+        justify-content: space-around;
+        flex-direction: row;
+    }
 }
