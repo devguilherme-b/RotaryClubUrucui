@@ -59,12 +59,6 @@ header {
     padding:5px
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
-
 .footer-as-secondary-menu {
     padding: 4% 0 0 0;
     display: flex;
@@ -123,7 +117,12 @@ header {
 
 /* Mobiles */
 @media(max-width: 575px) {
+    .navbar-nav[b-cn3gpfjfir] {
+        align-items: center;
+        gap: 10px;
+    }
     .navbar-nav {
+        align-items: center;
         font-size: large;
         text-align: center;
         justify-items: self-start;

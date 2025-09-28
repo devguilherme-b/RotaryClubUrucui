@@ -57,9 +57,35 @@ html {
     background-color: var(--yellow);
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
 
 @media (min-width: 768px) {
     html {
-    font-size: 16px;
-  }
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1025px){
+    .btn-purple {
+        width: 50%;
+        color: var(--white);
+        background-color: var(--purple)
+    }
+}
+
+@media (min-width: 1440px) {
+    html {
+        font-size: x-large;
+    }
+
+    .btn-contribute {
+        width: 300px;
+        height: auto;
+        padding: 3px;
+    }
 }
