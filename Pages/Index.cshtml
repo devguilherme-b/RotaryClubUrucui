@@ -5,10 +5,25 @@
 }
 
 <div class="text-center" id="home">
-    <img class="home-photo" src="~/Media/Imgs/HOME-IMG-ROTARY-CLUB-DE-URUÇUÍ.png" alt="Alternate Text" />
+    <img class="home-photo" src="~/Media/Imgs/HOME-ROTARY-CLUB-DE-URUÇUÍ.jpg" alt="Alternate Text" />
     <div class="home-contribute">
-        <h1>UNIDOS PARA FAZER O BEM</h1>
-        <img src="~/Media/Imgs/PIX-ROTARYCLUB-URUCUI-BR-CODE.png" alt="Alternate Text" />
-        <a class="btn-contribute" href="#">CONTRIBUIR</a>
+        <h1>UNIDOS PARA <br> FAZER O BEM</h1>
+        <div class="card-contribute">        
+            <div class="card-contribute-pix">
+                <img src="~/Media/Imgs/PIX-ROTARYCLUB-URUCUI-BR-CODE.png" alt="Br code para realizar doação para o Rotary Club de Uruçuí." />
+                <div class="card-contribute-details">
+                    <h5>Doe qualquer valor <span>via PIX!</span></h5>
+                    <p id="textForToCopy">52.476.099/0001-04</p>
+                    <button type="button" class="btn btn-contribute" onclick="copyToClipboard('textForToCopy')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                        </svg>
+                        Copiar chave PIX!
+                    </button>
+                </div>
+            </div>
+            <a class="btn btn-purple element-for-tablet-and-desktop" href="#" id="oi">CONTRIBUIR</a>
+        </div>
+        <a class="btn btn-purple element-for-mobile" href="#" id="oi">CONTRIBUIR</a>
     </div>
 </div>

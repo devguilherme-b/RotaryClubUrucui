@@ -10,6 +10,7 @@ ul {
 .container-edited {
     margin-top: calc((100vh / 10) + 2.3vh)
 }
+
 /*Normal code*/
 .rotary-year {
     color: var(--dark-blue);
@@ -20,18 +21,21 @@ ul {
 }
 
 header {
-    z-index:100;
-    padding: 7px;
-    position: fixed;
-    top:0;
+    top: 0;
     left: 0;
+    z-index: 100;
     width: 100vw;
+    padding: 7px 10px;
+    position: fixed;
 }
 
 .navbar {
     background-color: var(--green);
     border-radius: 10px;
     filter: drop-shadow(2px 3px 6px var(--white))
+}
+.navbar-nav{
+    gap:10px
 }
 
 .nav-item-edited {
@@ -41,7 +45,6 @@ header {
     align-content: center;
     background-color: var(--purple)
 }
-
 .nav-item a {
     color: var(--white);
     text-decoration: none
@@ -106,17 +109,36 @@ header {
 
 /* MOBILE */
 @media (max-width: 480px) {
+    .container-edited {
+        margin-top: calc(100vh / 10)
+    }
+
     .footer .nav-link {
         padding: 0 1rem;
     }      
-
     .footer-as-secondary-menu {
         flex-direction: column;
     }
 }
 
+/* Mobiles */
+@media(max-width: 575px) {
+    .navbar-nav {
+        font-size: large;
+        text-align: center;
+        justify-items: self-start;
+        font-weight: 700;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
 /* TABLETS */
 @media (max-width: 768px) {
+    .container-edited {
+        margin-top: calc(100vh / 10)
+    }
+
     .credits-for-developer, .footer .container p {
         padding: 3rem 0
     }
@@ -143,10 +165,13 @@ header {
     }
 }
 @media (min-width: 769px) {
+    header {
+        padding: 7px 20px;
+    }
+
     .footer .nav-link {
         padding: 0 1rem;
     }
-
     .nav-footer {
         display: flex;
         flex-direction: row;
