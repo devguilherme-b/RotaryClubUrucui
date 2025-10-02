@@ -17,30 +17,23 @@
     min-height: 100vh;
     width: 100%;
 }
-.section-title {
-    font-weight: 700;
-    font-size: 2rem;
+
+/* TOPICS */
+.section-topic{
+    display: flex;
+    align-items: center;
+}
+.section-topic img{
+    width: auto;
+    height: 35px;
+    padding-right: 10px;
+    animation: roleLeft 2s ease-in-out
+}
+.section-topic h1{
+    color: var(--dark-blue);
+    font-weight: 700
 }
 
-/* SECTIONS */
-#home {
-    z-index: 2;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: var(--green);
-    color: var(--white);
-    padding-top: 3%;
-    padding-bottom: 10%;
-}
-#about {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 100%;
-    padding: 3%;
-    background-color: var(--dark-blue);
-}
 
 /* BUTTONS */
 .btn {
@@ -124,21 +117,91 @@ html {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+.element-for-tablet-and-desktop {
+    display: block
+}
+.element-for-mobile {
+    display: none
+}
+
+@media (max-width: 480px){
+    .element-for-tablet-and-desktop {
+        display: none
+    }
+
+    .element-for-mobile {
+        display: block
+    }
+}
+@media (min-width: 481px) {
+    .element-for-tablet-and-desktop {
+        display: none
+    }
+
+    .element-for-mobile {
+        display: block
+    }
+}
+@media (min-width: 610px) {
+    .element-for-tablet-and-desktop {
+        display: none
+    }
+
+    .element-for-mobile {
+        display: block
+    }
+}
+
 @media (min-width: 768px) {
+    .about-img {
+        width: 30vw;
+        border-radius: 20px
+    }
+
     html {
         font-size: 16px;
     }
 }
 
 @media (min-width: 1025px){
+    .section-topic {
+        justify-self: flex-start;
+        padding: 0
+    }
+
+    .element-for-tablet-and-desktop {
+        display: block
+    }
+    .element-for-mobile {
+        display: none
+    }
+
     .btn-purple {
         width: 50%;
         color: var(--white);
         background-color: var(--purple)
     }
 }
-
+@media (min-width: 1281px) {
+    .section-topic {
+        justify-self: flex-start;
+        padding: 0
+    }
+}
+    
 @media (min-width: 1440px) {
+    .section-topic {
+        justify-self: flex-start;
+        padding: 0
+    }
+
+    .element-for-tablet-and-desktop {
+        display: block
+    }
+
+    .element-for-mobile {
+        display: none
+    }
 
     html {
         font-size: 16px;
@@ -148,5 +211,23 @@ html {
         width: 300px;
         height: auto;
         padding: 3px;
+    }
+}
+@media (min-width: 1991px){
+    .section-topic {
+        justify-self: flex-start;
+        padding: 0;
+    }
+}
+
+/*  ANIMATIONS  */
+
+@keyframes roleLeft {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
     }
 }
