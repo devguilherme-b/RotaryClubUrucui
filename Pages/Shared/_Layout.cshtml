@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/About.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RotaryClubUrucui.styles.css" asp-append-version="true" />
+    <!-- Links Externos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -31,7 +37,7 @@
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index">Quem somos</a></li>
+                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="about">Quem somos</a></li>
                                 <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index">Diretoria</a></li>
                             </ul>
                         </li>

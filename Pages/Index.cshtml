@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center" id="home">
+<div class="section text-center" id="home">
     <img class="home-photo" src="~/Media/Imgs/HOME-ROTARY-CLUB-DE-URUÇUÍ.jpg" alt="Alternate Text" />
     <div class="home-contribute">
         <h1>UNIDOS PARA <br> FAZER O BEM</h1>
@@ -14,7 +14,7 @@
                 <div class="card-contribute-details">
                     <h5>Doe qualquer valor <span>via PIX!</span></h5>
                     <p id="textForToCopy">52.476.099/0001-04</p>
-                    <button type="button" class="btn btn-contribute" onclick="copyToClipboard('textForToCopy')">
+                    <button type="button" class="btn btn-copy-key-pix" onclick="copyToClipboard('textForToCopy')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
                         </svg>
@@ -25,5 +25,26 @@
             <a class="btn btn-purple element-for-tablet-and-desktop" href="#" id="oi">CONTRIBUIR</a>
         </div>
         <a class="btn btn-purple element-for-mobile" href="#" id="oi">CONTRIBUIR</a>
+    </div>
+</div>
+
+<div class="section" id="about">
+    <div class="about-title">
+        <img src="~/Media/Imgs/ROTARY-ENDRENAGEM.png" alt="Imagem da endrenagem da logo do rotary club" />
+        <h1 class="section-title">QUEM SOMOS</h1>
+    </div>
+    <div class="about-main-content">
+        <div>
+            <div class="about-description">
+                <p>Somos parte de uma rede global presente em mais de 200 países, com 1,4 milhão de pessoas em ação.</p>
+                <p>Fundado em 2023, nosso clube reúne líderes voluntários de diferentes áreas para servir à comunidade com <span class="span-light-blue">ética</span>, <span class="span-light-blue">solidariedade</span> e <span class="span-light-blue">compromisso</span>.</p>
+                <p>Nossa missão é clara: <span class="span-yellow">fazer bem</span>, <span class="span-yellow">fortalecer laços</span> e  <span class="span-yellow">gerar impacto positivo</span> em Uruçuí e no mundo.</p>
+            </div>
+            <div class="about-links">
+                <a class="btn btn-yellow" asp-area="" asp-page="/Index" asp-fragment="about">SAIBA MAIS</a>
+                <a class="btn btn-yellow" asp-area="" asp-page="/Index" asp-fragment="about">DIRETORIA</a>
+            </div>
+        </div>
+        <img class="about-img" src="~/Media/Imgs/PROVA-QUÁDRUPULA-DO-ROTARY.png" alt="A prova quádrupula do Rotary CLub"/>
     </div>
 </div>

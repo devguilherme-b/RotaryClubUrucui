@@ -1,17 +1,4 @@
-﻿#home {
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    min-height: 100vh;
-    justify-content: space-evenly;
-    background-color: var(--green);
-    color: var(--white);
-    padding-top: 3%;
-    padding-bottom: 10%;
-}
-
-.home-photo {
+﻿.home-photo {
     left: 0;
     height: auto;
     width: calc(100vw / 2);
@@ -35,6 +22,7 @@
     background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
+    filter: drop-shadow(1px 3px 4px var(--purple))
 }
 .card-contribute-pix {
     display: flex;
@@ -252,12 +240,20 @@
         width: 40%;
     }
 
+    .card-contribute {
+        display: ruby;
+        border-radius: 20px;
+    }
     .card-contribute img {
         width: calc(100vw / 5.5)
     }
 }
 
 @media (min-width: 1241px) {
+    .card-contribute {
+        display: ruby;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -289,6 +285,8 @@
     }
 
     .card-contribute {
+        display: ruby;
+        border-radius: 20px;
         width: 36vw;
     }
 }
