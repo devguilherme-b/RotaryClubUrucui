@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     /* ---- COLORS ---- */
     --green: #018D8E;
     --black: #1E1E1E;
@@ -83,10 +83,15 @@
     background-color: var(--purple);
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+.btn-contribute-project{
+    color: var(--purple);
+    padding-bottom: 6%
+}
+.btn-contribute-project:hover {
+    color: var(--yellow);
+}
+.btn-contribute-project::after{
+   content: "▼";
 }
 
 /* SPAN STYLES */
@@ -125,19 +130,25 @@ html {
 }
 
 @media (max-width: 480px){
+    .btn-contribute-project {
+        width: 100%;
+    }
+
     .element-for-tablet-and-desktop {
         display: none
     }
-
     .element-for-mobile {
         display: block
     }
 }
 @media (min-width: 481px) {
+    .btn-contribute-project {
+        width: calc(100vw / 2);
+    }
+
     .element-for-tablet-and-desktop {
         display: none
     }
-
     .element-for-mobile {
         display: block
     }
