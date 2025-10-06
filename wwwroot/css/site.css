@@ -84,6 +84,7 @@
 }
 
 .btn-contribute-project{
+    width: 100%;
     color: var(--purple);
     padding-bottom: 6%
 }
@@ -105,8 +106,12 @@
     color: var(--yellow);
 }
 
-.span-green {
+.span-green, .span-read-more {
     color: var(--green);
+}
+
+.span-read-more{
+    text-decoration-line:underline
 }
 
 /* GLOBAL STYLES */
@@ -130,10 +135,6 @@ html {
 }
 
 @media (max-width: 480px){
-    .btn-contribute-project {
-        width: 100%;
-    }
-
     .element-for-tablet-and-desktop {
         display: none
     }
@@ -142,10 +143,6 @@ html {
     }
 }
 @media (min-width: 481px) {
-    .btn-contribute-project {
-        width: calc(100vw / 2);
-    }
-
     .element-for-tablet-and-desktop {
         display: none
     }
@@ -164,6 +161,13 @@ html {
 }
 
 @media (min-width: 768px) {
+    .element-for-tablet-and-desktop {
+        display: block
+    }
+
+    .element-for-mobile {
+        display: none
+    }
     .about-img {
         width: 30vw;
         border-radius: 20px

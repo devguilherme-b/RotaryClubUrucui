@@ -61,11 +61,11 @@
     <p>Cada projeto do Rotary nasce para atender uma necessidade real da comunidade.</p>
 
     <!-- Swiper -->
-    <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+    <swiper-container pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
                       slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
                       coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" loop="true">      
         <swiper-slide>
-            <img src="~/Media/Imgs/PROJETO-BANCO-ORTOPÉDICO-ROTARY-CLUB-DE-URUÇUÍ.png" />
+            <img src="~/Media/Imgs/BANCO-ORTOPÉDICO-PROJETO-ROTARY-CLUB-DE-URUÇUÍ.png" alt="Ilustração para o projeto Banco Ortopédico do Rotary Club de Uruçuí."/>
             <h4>Mobilidade para Todos</h4>
             <p>Entrega cadeiras de rodas e recursos de acessibilidade, garantindo dignidade, autonomia e inclusão social.</p>
             <a class="btn btn-contribute-project">Apoiar projeto</a>
@@ -98,5 +98,45 @@
         <h1>ÚLTIMAS NOTÍCIAS</h1>
     </div>
 
-    <p>Mais do que informar, nossas notícias mostram transparência e resultados concretos do impacto que estamos construindo juntos.</p>
+    <swiper-container space-between="30" slides-per-view="auto" pagination="true"
+                      pagination-clickable="true" centered-slide="true" loop="true">
+        <swiper-slide>
+            <a class="blog-card" asp-area="" asp-page="/Index" asp-fragment="home">
+                <img src="~/Media/Imgs/BLOG-ENTREGA-DE-KITS-ESCOLARES.jpg" alt="Rotary Club de Uruçuí entregando Kits Escolares no Itajacy Pacheco Martins" />
+                <div class="blog-card-content">
+                    <h6>Rotary realiza doação de kits escolares</h6>
+                    <p class="element-for-tablet-and-desktop">O Rotary Club de Uruçuí com apoio da Secretaria Municipal de Uruçuí esteve na Unidade Escolar Itajacy Pacheco para realizar a entrega dos estojos e kits escolares do projeto Letras Mágicas.</p>
+                    <p class="element-for-mobile">O Rotary Club de Uruçuí com apoio da Secretaria Municipal de Uruçuí esteve na Unidade Escolar Itajacy Pacheco Martins para ... <span class="span-read-more">Continue lendo aqui.</span></p>
+                </div>
+           </a>
+        </swiper-slide>
+        <swiper-slide>
+            <a class="blog-card" asp-area="" asp-page="/Index" asp-fragment="home">
+                <img src="~/Media/Imgs/BLOG-BINGO-DO-ROTARY.jpg" alt="Rotary Club realizando Bingo Beneficente" />
+                <div class="blog-card-content">
+                    <h6>Solidariedade em ação no Bingo do Rotary</h6>
+                    <p class="element-for-tablet-and-desktop">O Bingo – Rodadas do Bem contou com grande participação da comunidade e reforçou o compromisso do Rotary em multiplicar sorrisos e apoiar quem precisa.</p>
+                    <p class="element-for-mobile">O Bingo – Rodadas do Bem contou com grande participação da comunidade e reforçou o compromisso do Rotary em ... <span class="span-read-more">Continue lendo aqui.</span></p>
+                </div>
+            </a>
+        </swiper-slide>
+        <swiper-slide>
+            <a class="blog-card" asp-area="" asp-page="/Index" asp-fragment="home">
+                <img src="~/Media/Imgs/BLOG-PARCERIA-COM-UNICESUMAR.jpg" alt="Rotary Club de Uruçuí realizando parceria com a Unicesumar - Polo de Floriano - Piauí" />
+                <div class="blog-card-content">
+                    <h6>Rotary promove ação educativa com foco no ENEM</h6>
+                    <p class="element-for-tablet-and-desktop">O encontro reuniu o Rotary, a Unicesumar e autoridades educacionais para apresentar o projeto “Revisão ENEM 2025” e reforçar a educação em Uruçuí.</p>
+                    <p class="element-for-mobile">O encontro reuniu o Rotary, a Unicesumar e autoridades educacionais para apresentar o projeto o projeto “Revisão ENEM 2025” e ... <span class="span-read-more">Continue lendo aqui.</span></p>
+                </div>
+            </a>            
+        </swiper-slide>
+        <div class="autoplay-progress" slot="container-end">
+            <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+        </div>
+    </swiper-container>
+
+    <p class="blog-description">Mais do que informar, nossas notícias mostram transparência e resultados concretos do impacto que estamos construindo juntos.</p>
 </div>

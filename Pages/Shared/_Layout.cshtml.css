@@ -24,6 +24,7 @@ ul {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    overflow-x: hidden
 }
 /*Normal code*/
 .rotary-year {
