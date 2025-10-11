@@ -92,14 +92,11 @@
         padding: 10%;
     }
 }
-@media (min-width: 480px) {
-    
-}
-@media (min-width: 500px){
-    
-}
 /* TABLETS*/
 @media (min-width: 610px) {
+    #agenda .section-topic {
+        margin: 5% 0;
+    }
     .agenda-content{
         flex-direction: row
     }
@@ -176,6 +173,16 @@
 }
 
 @media (min-width: 1440px) {
+    .agenda-2025, .agenda-2026 {
+        height: 11vh;
+        width: calc(100vw / 4.8)
+    }
+    .agenda-2025 h1, .agenda-2026 h1 {
+        font-size: 4em
+    }
+    .agenda-2025 img, .agenda-2026 img{
+        width: 20%
+    }
     .agenda-content {
         width: 50vw
     }

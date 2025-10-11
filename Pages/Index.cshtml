@@ -22,9 +22,9 @@
                     </button>
                 </div>
             </div>
-            <a class="btn btn-purple element-for-tablet-and-desktop" href="#">CONTRIBUIR</a>
+            <a class="btn btn-purple element-for-tablet-and-desktop" asp-page="/Index" asp-fragment="contribute">CONTRIBUIR</a>
         </div>
-        <a class="btn btn-purple element-for-mobile">CONTRIBUIR</a>
+        <a class="btn btn-purple element-for-mobile" asp-page="/Index" asp-fragment="contribute">CONTRIBUIR</a>
     </div>
 </div>
 
@@ -97,6 +97,8 @@
         <img src="~/Media/Imgs/ROTARY-ENDRENAGEM.png" alt="Imagem da endrenagem da logo do rotary club" />
         <h1>ÚLTIMAS NOTÍCIAS</h1>
     </div>
+   
+    <p class="blog-description">Mais do que informar, nossas notícias mostram transparência e resultados concretos do impacto que estamos construindo juntos.</p>
 
     <swiper-container space-between="30" slides-per-view="auto" pagination="true"
                       pagination-clickable="true" centered-slide="true" loop="true">
@@ -138,7 +140,7 @@
         </div>
     </swiper-container>
 
-    <p class="blog-description">Mais do que informar, nossas notícias mostram transparência e resultados concretos do impacto que estamos construindo juntos.</p>
+    <a class="btn btn-purple" asp-page="/Index" asp-fragment="contribute">CONTRIBUIR</a>
 </div>
 
 <div class="section" id="agenda">
@@ -162,5 +164,58 @@
             <p>Fique por dentro das próximas ações, pois a cada encontro é uma oportunidade de servir, compartilhar e transformar vidas.</p>
             <p>Participe conosco e ajude a construir um futuro melhor!</p>
         </div>
+    </div>
+</div>
+
+<div class="section" id="partners">
+    <div class="section-topic">
+        <img src="~/Media/Imgs/ROTARY-ENDRENAGEM.png" alt="Imagem da endrenagem da logo do rotary club" />
+        <h1>PARCEIROS</h1>
+    </div>
+    <p>Nossos parceiros são essenciais para ampliar o alcance e o impacto dos nossos projetos. <br> Conheça quem já apoia/apoiou nossas ações:</p>
+    <div class="carousel-partners">
+        <swiper-container pagination="true" pagination-clickable="true" navigation="true" space-between="30" slides-per-view="auto"
+                          centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false" loop="true">
+            <swiper-slide>
+                <img src="~/Media/Imgs/PARCEIRO-PREFEITURA-MUNICIPAL-DE-URUCUI.webp" alt="Prefeitura Munincipal de Uruçuí" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="small-logo" src="~/Media/Imgs/PARCEIRO-SEMEC-URUÇUÍ.png" alt="Secretaria Munincipal de Educação de Uruçuí" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="small-logo circle-logo" src="~/Media/Imgs/PARCEIRO-11-GRE-URUÇUÍ.jpg" alt="11° Gerência Regional de Educação" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="small-logo" src="~/Media/Imgs/PARCEIRO-APAE-URUÇUÍ.png" alt="APAE de URUÇUÍ" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="~/Media/Imgs/PARCEIRO-BUNGE.svg" alt="BUNGE Alimentos S/A" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="small-logo" src="~/Media/Imgs/PARCEIRO-GRUPO-PROGRESSO.webp" alt="Grupo Progresso - Fazenda Progresso" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="~/Media/Imgs/PARCEIRO-FAZENDA-CANEL.png" alt="Fazenda Canel" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="~/Media/Imgs/PARCEIRO-CACAU-SHOW.webp" alt="Cacau Show de Uruçuí" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="small-logo" src="~/Media/Imgs/PARCEIRO-RR-CONTAS.png" alt="RR Contas" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="small-logo partner-bom-sabor" src="~/Media/Imgs/PARCEIRO-SABOR-DA-TERRA-URUÇUÍ.jpg" alt="Restaurante Sabor da Terra" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="~/Media/Imgs/PARCEIRO-DISBEVALPA-URUÇUÍ.png" alt="Disbevalpa de Uruçuí" />
+            </swiper-slide>
+            <div class="autoplay-progress" slot="container-end">
+                <svg viewBox="0 0 48 48" fill="#1E1E1">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </swiper-container>
+        <a class="btn btn-purple" asp-page="/Index" asp-fragment="contribute">CONTRIBUIR</a>
     </div>
 </div>
