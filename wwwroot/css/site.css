@@ -95,15 +95,36 @@
    content: "▼";
 }
 
-/* SPAN STYLES */
+.btn-contribute-option {
+    color: var(--gray);
+    background-color: var(--white);
+    padding: 1%;
+    border-radius: 10px;
+}
+.btn-contribute-option-active {
+    color: var(--white);
+    background-color: var(--green);
+    padding: 1%;
+    border-radius: 10px;
+}
+.btn-contribute-option:hover,.btn-contribute-option-active:hover{
+    color: var(--white);
+    background-color: var(--green);
 
-.span-light-blue{
+}
+/* SPAN STYLES */
+.span-light-blue {
     color: var(--dark-blue);
     filter: saturate(100);
 }
 
 .span-yellow {
     color: var(--yellow);
+}
+
+.span-purple {
+    font-weight: 700;
+    color: var(--purple);
 }
 
 .span-green, .span-read-more {
