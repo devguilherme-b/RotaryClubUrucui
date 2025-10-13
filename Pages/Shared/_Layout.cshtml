@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="~/css/Agenda.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Partners.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Contribute.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Contacts.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RotaryClubUrucui.styles.css" asp-append-version="true" />
     <!-- Links Externos-->  
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +29,7 @@
         <h6 class="rotary-year">ANO ROTÁRIO 2025 - 2026 - URUÇUÍ</h6>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand text-light" asp-area="" asp-page="/Index" asp-fragment="home">
+                <a class="navbar-brand text-light" asp-area="" asp-page="/Index" asp-fragment="inicio">
                     <img src="~/Media/Imgs/WHITE-LOGO-ROTARY-CLUB-URUÇUÍ.png" alt="Logo da Rotary Club de Uruçuí." height="50" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
@@ -40,31 +41,31 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="navbarSupportedContent">
                     <ul class="navbar-nav flex-grow-1 justify-content-center">
                         <li class="nav-item-edited">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="home">Início</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="inicio">Início</a>
                         </li>
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="about">Quem somos</a></li>
-                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index">Diretoria</a></li>
+                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="sobre">Quem somos</a></li>
+                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="sobre">Diretoria</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ações</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="projects">Projetos</a></li>
+                                <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="projetos">Projetos</a></li>
                                 <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="blog">Notícias</a></li>
                                 <li class="nav-item-edited"><a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="agenda">Agenda</a></li>
                             </ul>
                         </li>
                         <li class="nav-item-edited">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="partners">Parceiros</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="parceiros">Parceiros</a>
                         </li>
                         <li class="nav-item-edited">
                             <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="doe-agora">Doe Agora</a>
                         </li>
                         <li class="nav-item-edited">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="contacts">Contatos</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="contatos">Contatos</a>
                         </li>
                     </ul>
                 </div>
@@ -89,10 +90,10 @@
                         <p class="nav-link">Sobre</p>
                         <ul>
                             <li>
-                                <a class="nav-link text-light" asp-page="/Index">Quem Somos</a>
+                                <a class="nav-link text-light" asp-page="/About" asp-fragment="quem-somos">Quem Somos</a>
                             </li>
                             <li>
-                                <a class="nav-link text-light" asp-area="" asp-page="/Index">Diretoria</a>
+                                <a class="nav-link text-light" asp-area="" asp-page="/Board" asp-fragment="diretoria">Diretoria</a>
                             </li>
                         </ul>
                     </div>
@@ -100,13 +101,13 @@
                         <p class="nav-link">Ações</p>
                         <ul>
                             <li>
-                                <a class="nav-link text-light" asp-page="/Index">Projetos</a>
+                                <a class="nav-link text-light" asp-page="/Index" asp-fragment="projetos">Projetos</a>
                             </li>
                             <li>
-                                <a class="nav-link text-light" asp-area="" asp-page="/Index">Notícias</a>
+                                <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="blog">Notícias</a>
                             </li>
                             <li>
-                                <a class="nav-link text-light" asp-area="" asp-page="/Index">Agenda</a>
+                                <a class="nav-link text-light" asp-area="" asp-page="/Index" asp-fragment="agenda">Agenda</a>
                             </li>
                         </ul>
                     </div>

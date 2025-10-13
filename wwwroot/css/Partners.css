@@ -1,14 +1,14 @@
-﻿#partners {
+﻿.partners {
     background-color: var(--white);
     color: var(--black);
     text-align: center;
     padding: 2%
 }
 
-#partners swiper-container swiper-wrapper{
+.partners swiper-container swiper-wrapper{
     align-items: center
 }
-#partners .section-topic {
+.partners .section-topic {
     justify-content: center;
 }
 
@@ -57,10 +57,12 @@
     .carousel-partners swiper-container swiper-slide{
         align-content: center
     }
+    
     .small-logo {
         width: 120px !important;
         height: auto
     }
+    
     .partner-bom-sabor {
         border-radius: 10px
     }
@@ -98,9 +100,6 @@
     .carousel-partners .btn-purple {
         width: 50%
     }
-}
-
-@media (min-width: 769px) {
 }
 
 @media (min-width: 900px) {
@@ -145,10 +144,6 @@
     .carousel-partners .btn-purple {
         width: 30%
     }
-}
-
-@media (min-width: 1440px) {
-
 }
 
 @media (min-width: 1991px) {

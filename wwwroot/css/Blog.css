@@ -73,6 +73,13 @@
         font-size: 0.6em;
         text-align: justify;
     }
+
+    #blog .btn-purple {
+        width: 70%;
+        font-size: 1.7em;
+        font-weight: 600;
+        background-color: var(--green)
+    }
 }
 @media (min-width: 401px) {
     #blog swiper-container {
@@ -100,6 +107,13 @@
     .blog-card-content {
         font-size: 0.8em;
         text-align: justify;
+    }
+
+    #blog .btn-purple {
+        width: 70%;
+        font-size: 1.7em;
+        font-weight: 600;
+        background-color: var(--green)
     }
 }
 @media (min-width: 480px) {
@@ -227,6 +241,10 @@
         width: 50%;
         font-size: 0.6em;
     }
+
+    #blog .btn-purple {
+        width: 45%;
+    }
 }
 
 /* DESKTOPS */
@@ -242,6 +260,10 @@
     }
     .blog-card-content {
         width: 60%;
+    }
+
+    #blog .btn-purple {
+        width: 30%;
     }
 }
 

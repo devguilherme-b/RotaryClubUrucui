@@ -17,14 +17,14 @@ ul {
 
 .container-edited {
     margin-top: calc((100vh / 10) + 2.3vh);
+    overflow-x: hidden
 }
 
 * {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
-    overflow-x: hidden
+    font-style: normal
 }
 /*Normal code*/
 .rotary-year {
@@ -75,6 +75,17 @@ header {
     padding:5px
 }
 
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 0 100px 0 0;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+}
 .footer-as-secondary-menu {
     padding: 4% 0 0 0;
     display: flex;
@@ -104,17 +115,6 @@ header {
 }
 .credits-for-developer a:hover{
     text-decoration-line:underline;
-}
-
-.footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    line-height: 30px;
-    background-color: var(--black);
-    color: var(--white);
-    text-align: center;
 }
 
 /* MOBILE */
