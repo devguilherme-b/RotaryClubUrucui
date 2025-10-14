@@ -18,16 +18,20 @@
 .blog-card {
     text-decoration: none;
     background-color: var(--white);
+    padding: 1% 2%;
+    border-radius: 10px;
+    filter: drop-shadow(2px 2px 2px var(--gray));
     color: var(--gray);
     display: flex;
     align-items: center;
     gap: 1%
 }
 .blog-card:hover {
-    border-radius: 20px;
+    border-radius: 15px;
     color: var(--green);
     filter: drop-shadow(2px 2px 2px var(--green));
     transition: 0.4s ease-in-out;
+    padding: 4%
 }
 .blog-card img {
     background-color: var(--gray);
@@ -61,7 +65,8 @@
     }
 
     .blog-card {
-        width: 100%;
+        width: 90%;
+        padding: 3% 4%;
         flex-direction: column;
         align-items: flex-start
     }
@@ -96,7 +101,8 @@
     }
 
     .blog-card {
-        width: 60%;
+        width: 65%;
+        padding: 3% 4%;
         flex-direction: column;
         align-items: flex-start
     }
@@ -121,7 +127,7 @@
         width: 90vw;
     }
     #blog swiper-slide {
-        width: 50%
+        width: 60%
     }
 
     .blog-card {
@@ -132,15 +138,18 @@
     }
 }
 @media (min-width: 500px){
+    #blog swiper-container {
+        height: 70vh
+    }
     #blog .swiper-wrapper {
         align-items: start;
     }
     #blog swiper-slide {
-        width: 40%
+        width: 60%
     }
 
     .blog-card {
-        width: 80%;
+        width: 90%;
     }
 }
 /* TABLETS*/
@@ -157,7 +166,8 @@
 
     .blog-card {
         width: 80%;
-        flex-direction: row
+        flex-direction: row;
+        justify-content: space-evenly;
     }
     .blog-card img {
         width: 40%;
@@ -173,8 +183,9 @@
     }
 }
 @media (min-width: 700px) {
-    .blog-card{
-        align-items: center
+    .blog-card {
+        align-items: center;
+        justify-content: space-evenly;
     }
     .blog-card img {
         width: 38%;
@@ -184,7 +195,7 @@
         font-size: 1em
     }
 }
-@media (mi45vwn-width: 769px) {
+@media (min-width: 769px) {
     #blog swiper-container {
         width: 90vw;
         height: 50vh;
@@ -201,7 +212,8 @@
     .blog-card {
         width: 100%;
         flex-direction: row;
-        align-items: flex-start
+        align-items: flex-start;
+        justify-content: space-evenly;
     }
     .blog-card img {
         width: 45%;
@@ -231,6 +243,7 @@
     .blog-card {
         width: 100%;
         flex-direction: row;
+        justify-content: space-evenly;
         align-items: center
     }
     .blog-card img {
@@ -276,7 +289,8 @@
     }
 
     .blog-card {
-        align-items: center
+        align-items: center;
+        justify-content: space-evenly;
     }
     .blog-card img {
         width: auto;
