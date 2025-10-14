@@ -6,13 +6,14 @@
     flex-direction: column;
     background-color: var(--white);
 }
-.projects .section-topic{
-    justify-content: center
-}
 .projects p{
     padding: 10% 0%;
     text-align: center;
     color: var(--gray);
+}
+
+.projects .section-topic{
+    justify-content: center
 }
 
 .projects swiper-container {
@@ -56,6 +57,9 @@
         -webkit-mask-image: none;
         mask-image: none;
     }
+    .projects swiper-container p {
+        padding: 8px;
+    }
 
     .projects swiper-slide {
         width: 270px;
@@ -63,24 +67,19 @@
         padding: 10px;
         filter: drop-shadow(1px 1px 3px var(--black));
     }
-
     .projects swiper-slide img {
         width: 240px;
         height: 170px;
-    }
-
-    .projects swiper-container p {
-        padding: 8px;
     }
 }
 @media (min-width: 481px) {
     .projects p {
         padding: 10% 10% 0% 10%;
     }
+
     .projects swiper-container p {
         padding: 8px;
     }
-
     .projects swiper-container {
         width: calc(100vw / 1.2);
         height: 520px;
@@ -94,7 +93,6 @@
         padding: 20px;
         filter: drop-shadow(1px 1px 3px var(--black));
     }
-
     .projects swiper-slide img {
         width: 240px;
         height: 140px;
@@ -122,10 +120,10 @@
     .projects p {
         padding: 2%
     }
+
     .projects swiper-container p {
         padding: 8px;
     }
-
     .projects swiper-container {
         width: calc(100vw / 1.4);
     }
@@ -134,7 +132,6 @@
         width: 310px;
         height: 470px;
     }
-
     .projects swiper-slide img {
         width: 260px;
     } 
@@ -145,10 +142,10 @@
     .projects p {
         padding: 2%
     }
+
     .projects swiper-container p {
         padding: 10px;
     }
-
     .projects swiper-container {
         width: calc(100vw / 1.6);
     }
@@ -169,13 +166,14 @@
     .projects p {
         padding: 2%
     }
+
     .projects swiper-container p {
         padding: 10px;
     }
-
     .projects swiper-container {
         width: calc(100vw / 1.8);
     }
+    
     .projects swiper-slide {
         padding: 15px 10px;
         width: 330px;
@@ -191,13 +189,14 @@
     .projects p {
         padding: 2%
     }
+
     .projects swiper-container p {
         padding: 10px;
     }
-
     .projects swiper-container {
         width: calc(100vw / 2);
     }
+
     .projects swiper-slide {
         padding: 20px 10px;
         width: 330px;

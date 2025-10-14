@@ -49,6 +49,10 @@
     text-align: left
 }
 
+#blog .btn-purple:hover {
+    background-color: var(--yellow)
+}
+
 /* MOBILE */
 @media (max-width: 400px) {
     #blog swiper-container {
