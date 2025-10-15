@@ -1,0 +1,121 @@
+﻿.find-out-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    color: var(--gray);
+    background-color: var(--white)
+
+}
+.find-out-more-img-top {
+    width: 100%;
+    height: auto;
+    -webkit-mask-image: linear-gradient(to top, transparent, black 15%, black 100%, transparent);
+}
+
+.find-out-more-content{
+    text-align:center
+}
+.find-out-more-content div {
+    text-align: justify
+}
+.find-out-more-content h1 {
+    color: var(--green);
+    font-weight: 700
+}
+.find-out-more-content .span-purple, .find-out-more-content .span-green {
+    font-weight: 600
+}
+
+.find-out-more-content p .span-green{
+    font-weight: 500
+}
+/* MOBILES */
+@media (max-width: 400px) {
+    .find-out-more-content {
+        padding-top: 15%;
+        width: 70%
+    }
+    .find-out-more-content div h1{
+        margin: 5% 0%;
+        text-align: left
+    }
+    .find-out-more-content .btn{
+        width: 100%;
+        margin: 10% 0% 14% 0%;
+    }
+}
+@media (min-width: 401px) {
+    .find-out-more-content {
+        padding-top: 15%;
+        width: 70%
+    }
+    .find-out-more-content div h1{
+        margin: 5% 0%;
+        text-align: left
+    }
+    .find-out-more-content .btn{
+        width: 100%;
+        margin: 10% 0% 14% 0%;
+    }
+
+    .find-out-more-content .btn-purple{
+        font-size: larger
+    }
+}
+
+@media (min-width: 480px) {
+    c
+    .find-out-more-content .btn{
+        width: 85%;
+        margin: 10% 0% 14% 0%;
+    }
+}
+/* TABLETS */
+@media (min-width: 610px) {
+    .find-out-more-content .btn {
+        width: 75%;
+    }
+}
+
+@media (min-width: 769px) {
+    .find-out-more-content {
+        padding-top: 10%;
+        width: 60%
+    }
+    .find-out-more-content .btn {
+        width: 70%;
+    }
+
+    .find-out-more-img-top {
+        aspect-ratio: 16 / 9;
+        object-fit: cover; 
+        object-position: center;
+    }
+}
+
+/* NOTEBOOKS*/
+@media (min-width: 1024px) {
+    .find-out-more-content .btn {
+        width: 60%;
+    }
+}
+
+/* DESKTOPS */
+@media (min-width: 1280px) {
+    .find-out-more-content {
+        width: 55%
+    }
+    .find-out-more-content .btn {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .find-out-more-content .btn {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1999px) {
+}

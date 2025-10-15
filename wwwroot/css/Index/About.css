@@ -18,8 +18,8 @@
 }
 
 /* SECTION-TITLE CUSTOMIZED*/
-.about-main-content div .section-topic h1, #about .section-topic h1{
-    color: var(--yellow)
+.about-main-content div .section-topic h1, .about .section-topic h1{
+    color: var(--yellow) !important
 }
 
 .about-img {
