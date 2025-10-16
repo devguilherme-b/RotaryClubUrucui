@@ -42,6 +42,10 @@
     gap: 2%
 }
 
+.contribute-as-partner a {
+    text-decoration-line: none
+}
+
 /* MOBILE */
 @media(max-width: 370px) {
     .contribute-as-partner a {
