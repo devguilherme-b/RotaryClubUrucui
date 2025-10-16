@@ -17,7 +17,8 @@ ul {
 
 .container-edited {
     margin-top: calc((100vh / 10) + 2.3vh);
-    overflow-x: hidden
+    overflow: hidden;
+    max-width: 100%;
 }
 
 * {

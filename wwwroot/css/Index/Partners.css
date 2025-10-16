@@ -34,6 +34,9 @@
     .partner-bom-sabor {
         border-radius: 10px
     }
+    .partner-secretaria-municipal-de-educação-de-urucui {
+        width: 200px !important;
+    }
 
     .carousel-partners .btn-purple {
         width: 70%;
@@ -66,6 +69,9 @@
     .partner-bom-sabor {
         border-radius: 10px
     }
+    .partner-secretaria-municipal-de-educação-de-urucui {
+        width: 220px !important;
+    }
 
     .carousel-partners .btn-purple {
         width: 70%;
@@ -97,15 +103,21 @@
         width: 100px !important;
         height: auto
     }
+    .partner-secretaria-municipal-de-educação-de-urucui {
+        width: 230px !important;
+    }
     .carousel-partners .btn-purple {
         width: 50%
     }
 }
 
 @media (min-width: 900px) {
+    .partner-secretaria-municipal-de-educação-de-urucui {
+        width: 220px !important;
+    }
     .carousel-partners swiper-container swiper-slide img {
-        width: 10vw;
-        height: auto
+        width: 170px;
+        height: auto !important
     }
 
     .small-logo {
@@ -114,6 +126,7 @@
     .small-logo-with-cicle-border {
         border-radius: 10px
     }
+    
 
     .carousel-partners swiper-container swiper-slide {
         width: 30%
