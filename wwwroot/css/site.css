@@ -117,22 +117,21 @@
     color: var(--dark-blue);
     filter: saturate(100);
 }
-
 .span-yellow {
     color: var(--yellow);
 }
-
 .span-purple {
     font-weight: 700;
     color: var(--purple);
 }
-
 .span-green, .span-read-more {
     color: var(--green);
 }
-
 .span-read-more{
     text-decoration-line:underline
+}
+.span-dark-blue{
+    color: var(--dark-blue);
 }
 
 /* GLOBAL STYLES */

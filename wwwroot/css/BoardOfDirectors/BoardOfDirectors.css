@@ -1,0 +1,108 @@
+﻿/* 
+board of director = Diretoria
+board director = Conselho Diretor
+*/
+
+.board-of-directors {
+    width: 100vw
+}
+
+.board-of-directors, .rotary-member, .rotary-member-content, .member-header {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.rotary-member img, .member-header img{
+    border-radius: 50%
+}
+.board-of-directors h1, .board-director {
+    color: var(--dark-blue)
+}
+.board-director, .board-director-position{
+    background-color: var(--dark-blue)
+}
+
+.board-of-directors-content {
+    color: var(--gray);
+    width: 90%
+}
+
+.board-director {
+    color: var(--white) !important;
+    padding: 0.5em
+}
+.board-director-position {
+    color: var(--white);
+    text-align: center;
+    border-radius: 10px;
+    padding: 1%
+}
+
+.rotary-member-content {
+    flex-direction: column;
+}
+.member-description{
+    text-align:justify
+}
+/* MOBILE */
+@media (max-width: 480px) {
+    .board-director{
+        margin: 15% 0%
+    }
+    .rotary-member img, .member-header img {
+        width: 30%;
+        padding-right: 5%
+    }
+    .board-director-position{
+        width:100px
+    }
+    .member-description{
+        width: 85%
+    }
+}
+@media (min-width: 481px) {
+    .board-director {
+        margin: 15% 0%
+    }
+
+    .rotary-member{
+        width: 90%
+    }
+    .rotary-member img, .member-header img {
+        width: 30%;
+        padding-right: 5%
+    }
+
+    .board-director-position {
+        width: 100px
+    }
+
+    .member-description {
+        width: 85%
+    }
+}
+
+/* TABLET */
+@media (min-width: 610px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+/* NOTEBOOK*/
+@media (min-width: 1025px){
+
+}
+@media (min-width: 1281px) {
+
+}
+
+/* DESKTOP */
+    
+@media (min-width: 1440px) {
+
+}
+@media (min-width: 1991px){
+
+}
