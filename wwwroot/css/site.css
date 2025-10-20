@@ -83,6 +83,20 @@
     background-color: var(--purple);
 }
 
+.btn-rotary-collapse {
+    width: 150px;
+    color: var(--white);
+    text-decoration-line: none;
+    border-radius: 10px;
+    padding: 0% 2%;
+    text-align: center;
+    background-color: var(--gray);
+}
+.btn-rotary-collapse:hover {
+    color: var(--white);
+    background-color: var(--yellow);
+}
+
 .btn-contribute-project {
     width: 100%;
     color: var(--purple);
@@ -113,6 +127,9 @@
 
 }
 /* SPAN STYLES */
+span{
+    display: contents;
+}
 .span-light-blue {
     color: var(--dark-blue);
     filter: saturate(100);
@@ -135,7 +152,6 @@
 }
 
 /* GLOBAL STYLES */
-
 html {
     font-size: 14px;
     position: relative;
@@ -257,12 +273,3 @@ html {
 
 /*  ANIMATIONS  */
 
-@keyframes roleLeft {
-    0% {
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1
-    }
-}

@@ -25,17 +25,6 @@ board director = Conselho Diretor
 .board-director, .board-director-position{
     background-color: var(--dark-blue)
 }
-
-.rotary-member{
-    margin: 5% 0%
-}
-.member-header div h5{
-    font-weight: 600
-}
-.board-of-directors-content {
-    color: var(--gray);
-    width: 90%
-}
 .board-director, .commissions{
     color: var(--white) !important;
     padding: 0.5em
@@ -49,6 +38,20 @@ board director = Conselho Diretor
     text-align: center;
     border-radius: 20px;
 }
+
+.rotary-member{
+    margin: 5% 0%
+}
+.member-header {
+    justify-content: left;
+}
+.member-header div h5{
+    font-weight: 600
+}
+.board-of-directors-content {
+    color: var(--gray);
+    width: 90%
+}
 .board-director-position {
     padding: 1% 4%
 }
@@ -61,17 +64,59 @@ board director = Conselho Diretor
 .member-description{
     text-align:justify
 }
+
+.rotary-left-icon {
+    animation: 2s LeftInifiteRotation ease-in-out infinite
+}
+.rotary-right-icon {
+    animation: 2s RightInifiteRotation ease-in-out infinite
+}
+/* ANIMATIONS */
+@keyframes LeftInifiteRotation {
+    0% {
+        transform: rotateZ(60deg)
+    }
+
+    50% {
+        transform: rotateZ(90deg)
+    }
+
+    100% {
+        transform: rotateZ(60deg)
+    }
+}
+@keyframes RightInifiteRotation {
+    0% {
+        transform: scaleX(-1) rotateZ(60deg)
+    }
+
+    50% {
+        transform: scaleX(-1) rotateZ(80deg)
+    }
+
+    100% {
+        transform: scaleX(-1) rotateZ(60deg)
+    }
+}
+
 /* MOBILE */
 @media (max-width: 480px) {
-    .board-director{
+    .board-director {
         margin: 15% 0%
     }
+
     .rotary-member img, .member-header img {
         width: 30%;
         padding-right: 5%
     }
-    .member-description{
+
+    .member-description {
         width: 85%
+    }
+
+    .commissions-position{
+        text-align:justify;
+        padding: 5px 15px
     }
 }
 @media (min-width: 481px) {
