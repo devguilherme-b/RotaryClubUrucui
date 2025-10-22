@@ -39,7 +39,10 @@ board director = Conselho Diretor
     border-radius: 20px;
 }
 
-.rotary-member{
+.board-of-directors h1{
+    font-weight: 700
+}
+.rotary-member {
     margin: 5% 0%
 }
 .member-header {
@@ -50,7 +53,6 @@ board director = Conselho Diretor
 }
 .board-of-directors-content {
     color: var(--gray);
-    width: 90%
 }
 .board-director-position {
     padding: 1% 4%
@@ -104,6 +106,10 @@ board director = Conselho Diretor
     .board-director {
         margin: 15% 0%
     }
+    .board-of-directors-content {
+        width: 75%;
+        margin: 10% 0% 14% 0%;
+    }
 
     .rotary-member img, .member-header img {
         width: 30%;
@@ -123,6 +129,10 @@ board director = Conselho Diretor
     .board-director {
         margin: 15% 0%
     }
+    .board-of-directors-content {
+        width: 70%;
+        margin: 10% 0% 14% 0%;
+    }
     .rotary-member img, .member-header img {
         width: 30%;
         padding-right: 5%
@@ -137,9 +147,6 @@ board director = Conselho Diretor
 
 /* TABLET */
 @media (min-width: 610px) {
-    .board-of-directors-content {
-        width: 75%
-    }
     .board-director {
         margin: 13% 0%
     }
@@ -151,7 +158,8 @@ board director = Conselho Diretor
 
 @media (min-width: 768px) {
     .board-of-directors-content {
-        width: 70%
+        padding-top: 10%;
+        width: 60%
     }
     .rotary-member img, .member-header img {
         width: 35%;
@@ -165,13 +173,10 @@ board director = Conselho Diretor
 }
 /* NOTEBOOK*/
 @media (min-width: 1024px){
-    .board-of-directors-content {
-        width: 60%
-    }
 }
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
     .board-of-directors-content {
-        width: 50%
+        width: 55%
     }
     .rotary-member {
         align-items: center
