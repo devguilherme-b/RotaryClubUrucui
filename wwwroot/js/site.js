@@ -7,66 +7,86 @@
     });
 }
 
-// Função para gerar Pix payload EMV
-function gerarPixPayload(chavePix, nome, cidade, valor) {
-    const pad = (s, n) => s.toString().padStart(n, '0');
 
-    let payload = "";
-    payload += "000201";
-    let mai = "0014BR.GOV.BCB.PIX"; 
-    mai += "01" + pad(chavePix.length, 2) + chavePix;
-    payload += "26" + pad(mai.length, 2) + mai;
-
-    payload += "52" + "0000";
-    payload += "53" + "986"; 
-    payload += "54" + pad(valor, 1); 
-    payload += "58" + "02BR";
-    payload += "59" + pad(nome.length, 2) + nome;
-    payload += "60" + pad(cidade.length, 2) + cidade;
-    payload += "6304";
-
-    // Função CRC16-CCITT (hex)
-    function crc16(str) {
-        let crc = 0xFFFF;
-        for (let i = 0; i < str.length; i++) {
-            crc ^= str.charCodeAt(i) << 8;
-            for (let j = 0; j < 8; j++) {
-                crc = (crc & 0x8000) ? ((crc << 1) ^ 0x1021) : (crc << 1);
-            }
-        }
-        crc &= 0xFFFF;
-        return crc.toString(16).toUpperCase().padStart(4, '0');
-    }
-
-    payload += crc16(payload);
-    return payload;
+// Função para gerar o campo EMV
+function emv(id, value) {
+    const len = value.length.toString().padStart(2, '0');
+    return id + len + value;
 }
 
-// Função para gerar QR Code
+// Função principal: gera o payload Pix
+function gerarPixPayload(chavePix, nome, cidade, valor = "", txid = "TX1234") {
+    const payloadFormatIndicator = emv("00", "01");
+    const pointOfInitiationMethod = valor ? emv("01", "12") : emv("01", "11");
+
+    const gui = emv("00", "br.gov.bcb.pix");
+    const chave = emv("01", chavePix);
+    const txidField = emv("02", txid);
+    const merchantAccountInfo = emv("26", gui + chave + txidField);
+
+    const merchantCategoryCode = emv("52", "0000");
+    const transactionCurrency = emv("53", "986");
+    const transactionAmount = valor ? emv("54", parseFloat(valor).toFixed(2)) : "";
+    const countryCode = emv("58", "BR");
+    const merchantName = emv("59", nome.substring(0, 25));
+    const merchantCity = emv("60", cidade.substring(0, 15));
+    const additionalDataField = emv("62", emv("05", txid));
+
+    const payloadSemCRC =
+        payloadFormatIndicator +
+        pointOfInitiationMethod +
+        merchantAccountInfo +
+        merchantCategoryCode +
+        transactionCurrency +
+        transactionAmount +
+        countryCode +
+        merchantName +
+        merchantCity +
+        additionalDataField;
+
+    const crc = gerarCRC16(payloadSemCRC + "6304");
+    return payloadSemCRC + "6304" + crc;
+}
+
+// Função para gerar o CRC16-CCITT (polinômio 0x1021)
+function gerarCRC16(payload) {
+    let polinomio = 0x1021, resultado = 0xFFFF;
+    for (let i = 0; i < payload.length; i++) {
+        resultado ^= payload.charCodeAt(i) << 8;
+        for (let j = 0; j < 8; j++) {
+            resultado = (resultado & 0x8000)
+                ? (resultado << 1) ^ polinomio
+                : resultado << 1;
+            resultado &= 0xFFFF;
+        }
+    }
+    return resultado.toString(16).toUpperCase().padStart(4, "0");
+}
+
+// Gera o QRCode e exibe o payload
 function gerarQRCode(valor) {
-    const chavePix = "52.476.099/0001-04";
-    const nome = "Rotary Club de Uruçuí";
-    const cidade = "Uruçuí-PI";
+    const chavePix = "52476099000104";
+    const nome = "ROTARY";
+    const cidade = "URUCUI";
+    const txid = "TX" + Date.now().toString().slice(-6);
+
+    const payload = gerarPixPayload(chavePix, nome, cidade, valor, txid);
 
     document.getElementById("qrContainer").innerHTML = "";
-
-    const pixTexto = gerarPixPayload(chavePix, nome, cidade, valor);
-
     new QRCode(document.getElementById("qrContainer"), {
-        text: pixTexto,
-        width: 200,
-        height: 200
+        text: payload,
+        width: 250,
+        height: 250,
+        correctLevel: QRCode.CorrectLevel.Q
     });
 
-    document.getElementById("pixTexto").innerText = `Pix (copia e cola): ${pixTexto}`;
+    document.getElementById("pixTexto").innerText = payload;
 }
 
-// Eventos de clique nos links de doação
-const linksDoacao = document.querySelectorAll(".donate-btn");
-linksDoacao.forEach(link => {
-    link.addEventListener("click", function (event) {
-        event.preventDefault();
-        const valor = this.dataset.valor;
-        gerarQRCode(valor);
+// Evento do botão
+document.querySelectorAll(".donate-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+        e.preventDefault();
+        gerarQRCode(btn.dataset.valor);
     });
 });

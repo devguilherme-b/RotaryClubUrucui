@@ -243,11 +243,10 @@
                 </button>
             </div>
             <div class="contribute-options">
-                <a class="donate-btn btn btn-contribute-option" data-valor="1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 1 R$</a>
-                <a class="donate-btn btn btn-contribute-option-active" data-valor="5" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 5 R$</a>
-                <a class="donate-btn btn btn-contribute-option" data-valor="10" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 10 R$</a>
+                <a class="donate-btn btn btn-contribute-option" data-valor="01.00" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 1 R$</a>
+                <a class="donate-btn btn btn-contribute-option-active" data-valor="05.00" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 5 R$</a>
+                <a class="donate-btn btn btn-contribute-option" data-valor="10.00" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 10 R$</a>
             </div>
-
         </div>
         <div data-aos="fade-left" class="contribute-right">
             <p>Cada doação, cada gesto de apoio, nos ajuda a levar esperança a quem mais precisa.</p>
@@ -295,8 +294,10 @@
             <li>Escolha pagar via pix</li>
             <li>Cole o código abaixo</li>
         </ol>
+
         <p id="pixTexto"></p>
-        <div id="qrContainer" style="margin-top:20px;"></div>
+
+        <div id="qrContainer"></div> 
         
         <button type="button" class="btn btn-primary" onclick="copyToClipboard('pixTexto')">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
