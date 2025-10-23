@@ -1,0 +1,97 @@
+﻿.offcanvas-customized {
+    height: 70vh;
+    background-color: var(--white);
+    justify-content: center;
+    color: var(--gray)
+}
+
+.offcanvas-customized .section-topic h1 {
+    font-size: x-large;
+}
+
+.offcanvas-customized .offcanvas-header{
+    color: var(--green)
+}
+
+.offcanvas-customized .offcanvas-body{
+    width: 100%
+}
+
+.offcanvas-customized .offcanvas-body h5{
+    font-weight: 600;
+    color: var(--green)
+}
+
+.offcanvas-customized, .offcanvas-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3%
+}
+
+.false-btn-payment-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray);
+    gap: 2%;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    width: 50%;
+    height: 50px;
+    cursor: pointer;
+}
+.false-btn-payment-code:hover{
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.false-btn-payment-code div {
+    display: flex;
+    overflow: hidden;
+    width: 75%;
+    padding: 1%;
+    -webkit-mask-image: linear-gradient(to left, transparent 0, black 10%);
+}
+.offcanvas-customized .offcanvas-body .btn-success {
+    border: var(--green);
+    background-color: var(--green)
+}
+
+#pixTexto {
+    margin: 0
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+}
+@media (min-width: 481px) {
+    .false-btn-payment-code, .btn-success {
+        width: 300px
+    }
+}
+
+/* TABLETS*/
+@media (min-width: 610px) {
+    
+}
+@media (min-width: 769px) {
+    
+}
+
+/* NOTEBOOKS */
+@media (min-width: 1025px) {
+    
+}
+
+/* DESKTOPS */
+@media (min-width: 1281px) {
+    
+}
+
+@media (min-width: 1440px) {
+   
+}

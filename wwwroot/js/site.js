@@ -75,8 +75,8 @@ function gerarQRCode(valor) {
     document.getElementById("qrContainer").innerHTML = "";
     new QRCode(document.getElementById("qrContainer"), {
         text: payload,
-        width: 250,
-        height: 250,
+        width: 200,
+        height: 200,
         correctLevel: QRCode.CorrectLevel.Q
     });
 
