@@ -5,13 +5,14 @@ board director = Conselho Diretor
 
 .board-of-directors {
     padding-top: 10%;
-    width: 100vw
+    width: 100vw;
+    flex-direction: column
 }
 
 .board-of-directors, .rotary-member, .rotary-member-content, .member-header {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 .rotary-member img, .member-header img{
     border-radius: 50%
@@ -73,6 +74,10 @@ board director = Conselho Diretor
 .rotary-right-icon {
     animation: 2s RightInifiteRotation ease-in-out infinite
 }
+
+.board-of-directors .btn-yellow {
+    margin-bottom: 10%
+}
 /* ANIMATIONS */
 @keyframes LeftInifiteRotation {
     0% {
@@ -108,7 +113,7 @@ board director = Conselho Diretor
     }
     .board-of-directors-content {
         width: 75%;
-        margin: 10% 0% 14% 0%;
+        margin: 10% 0% 5% 0%;
     }
 
     .rotary-member img, .member-header img {
@@ -172,8 +177,6 @@ board director = Conselho Diretor
     }
 }
 /* NOTEBOOK*/
-@media (min-width: 1024px){
-}
 @media (min-width: 1280px) {
     .board-of-directors-content {
         width: 55%
@@ -181,13 +184,4 @@ board director = Conselho Diretor
     .rotary-member {
         align-items: center
     }
-}
-
-/* DESKTOP */
-    
-@media (min-width: 1440px) {
-
-}
-@media (min-width: 1991px){
-
 }

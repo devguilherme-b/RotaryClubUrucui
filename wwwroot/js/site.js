@@ -1,4 +1,21 @@
-﻿function copyToClipboard(elementId) {
+﻿// Função para controlar velocidade de abertura do details
+document.querySelectorAll("details").forEach((el) => {
+    el.addEventListener("toggle", () => {
+        const content = el.querySelector(".agenda-month-content");
+        if (el.open) {
+            const height = content.scrollHeight;
+            content.style.height = height + "px";
+            setTimeout(() => (content.style.height = "auto"), 100);
+        } else {
+            const height = content.scrollHeight;
+            content.style.height = height;
+            setTimeout(() => (content.style.height = "0px"), 10);
+        }
+    });
+});
+
+// Função para copiar textos
+function copyToClipboard(elementId) {
     var text = document.getElementById(elementId).innerText;
     navigator.clipboard.writeText(text).then(function () {
         alert("Conteúdo copiado com sucesso.");
@@ -13,8 +30,6 @@ function emv(id, value) {
     const len = value.length.toString().padStart(2, '0');
     return id + len + value;
 }
-
-// Função principal: gera o payload Pix
 function gerarPixPayload(chavePix, nome, cidade, valor = "", txid = "TX1234") {
     const payloadFormatIndicator = emv("00", "01");
     const pointOfInitiationMethod = valor ? emv("01", "12") : emv("01", "11");
@@ -47,8 +62,6 @@ function gerarPixPayload(chavePix, nome, cidade, valor = "", txid = "TX1234") {
     const crc = gerarCRC16(payloadSemCRC + "6304");
     return payloadSemCRC + "6304" + crc;
 }
-
-// Função para gerar o CRC16-CCITT (polinômio 0x1021)
 function gerarCRC16(payload) {
     let polinomio = 0x1021, resultado = 0xFFFF;
     for (let i = 0; i < payload.length; i++) {
@@ -63,7 +76,6 @@ function gerarCRC16(payload) {
     return resultado.toString(16).toUpperCase().padStart(4, "0");
 }
 
-// Gera o QRCode e exibe o payload
 function gerarQRCode(valor) {
     const chavePix = "52476099000104";
     const nome = "ROTARY";
@@ -83,7 +95,7 @@ function gerarQRCode(valor) {
     document.getElementById("pixTexto").innerText = payload;
 }
 
-// Evento do botão
+// Evento do botão de doação
 document.querySelectorAll(".donate-btn").forEach(btn => {
     btn.addEventListener("click", e => {
         e.preventDefault();
