@@ -56,10 +56,34 @@
         grid-template-columns: 1fr 1fr;
         gap: 2em
     }
+    .march-month {
+        grid-area: 2 / 1 / span 1 / span 2;
+    }
+    .june-month {
+        grid-area: 4 / 1 / span 1 / span 2;
+    }
+    .november-month {
+        grid-area: 3 / 1 / span 1 / span 2;
+    }
+    .december-month {
+        grid-area: 4 / 1 / span 2 / span 2;
+    }
 }
 @media (min-width: 610px) {
     #agenda-first-year, #agenda-second-year {
-        grid-template-columns: 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .march-month {
+        grid-area: 2 / 1 / span 1 / span 2;
+    }
+    .june-month {
+        grid-area: 3 / 2 / span 1 / span 1;
+    }
+    .november-month {
+        grid-area: 3 / 2 / span 1 / span 1;
+    }
+    .december-month {
+        grid-area: 2 / 2 / span 1 / span 2;
     }
 }
 
@@ -67,27 +91,38 @@
     #agenda-first-year, #agenda-second-year {
         gap: 2.3em
     }
+    .march-month {
+        grid-area: 2 / 1 / span 1 / span 2;
+    }
+    .june-month {
+        grid-area: 3 / 2 / span 1 / span 1;
+    }
     .agenda-month summary {
         padding: 15px 10px
     }
 }
 
-@media (min-width: 1025px){
-    
-}
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
     #agenda-first-year, #agenda-second-year {
-        gap: 3em
+        gap: 3em;
+        width: 90%
     }
-
     .agenda-month summary {
         padding: 20px 10px
     }
 }
     
 @media (min-width: 1440px) {
-    
-}
-@media (min-width: 1991px){
-    
+    .march-month {
+        grid-area: 1 / 3 / span 1 / span 2;
+    }
+    .june-month {
+        grid-area: 2 / 3 / span 1 / span 2;
+    }
+    .november-month {
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+    .december-month {
+        grid-area: 2 / 3 / span 1 / span 1;
+    }
 }
