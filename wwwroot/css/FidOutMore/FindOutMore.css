@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    padding-top: 12%;
     color: var(--gray);
-    background-color: var(--white)
-
+    background-image: linear-gradient(to bottom, var(--green), var(--white) 10%, var(--white));
 }
 .find-out-more-img-top {
     width: 100%;
@@ -82,6 +82,9 @@
 }
 
 @media (min-width: 768px) {
+    .find-out-more {
+        padding-top: 0
+    }
     .find-out-more-content {
         width: 60%
     }
