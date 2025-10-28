@@ -10,7 +10,8 @@
 .find-out-more-img-top {
     width: 100%;
     height: auto;
-    -webkit-mask-image: linear-gradient(to top, transparent, black 15%, black 100%, transparent);
+    -webkit-mask-image: linear-gradient(to top, transparent, black 15%, black 95%, transparent);
+    mask-image: linear-gradient(to top, transparent, black 15%, black 95%, transparent);
 }
 
 .find-out-more-content{
@@ -72,14 +73,16 @@
 }
 /* TABLETS */
 @media (min-width: 610px) {
+    .find-out-more-content {
+        padding-top: 0;
+    }
     .find-out-more-content .btn {
         width: 75%;
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .find-out-more-content {
-        padding-top: 10%;
         width: 60%
     }
     .find-out-more-content .btn {
@@ -89,7 +92,7 @@
     .find-out-more-img-top {
         aspect-ratio: 16 / 9;
         object-fit: cover; 
-        object-position: center;
+        object-position: top;
     }
 }
 
@@ -114,7 +117,4 @@
     .find-out-more-content .btn {
         width: 40%;
     }
-}
-
-@media (min-width: 1999px) {
 }

@@ -6,7 +6,8 @@ board director = Conselho Diretor
 .board-of-directors {
     padding-top: 10%;
     width: 100vw;
-    flex-direction: column
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, var(--green), var(--white) 10%, var(--white));
 }
 
 .board-of-directors, .rotary-member, .rotary-member-content, .member-header {
@@ -40,7 +41,11 @@ board director = Conselho Diretor
     border-radius: 20px;
 }
 
-.board-of-directors h1{
+.rotary-structure{
+    width: 100%;
+    border-radius: 8px;
+}
+.board-of-directors h1 {
     font-weight: 700
 }
 .rotary-member {
@@ -163,7 +168,6 @@ board director = Conselho Diretor
 
 @media (min-width: 768px) {
     .board-of-directors-content {
-        padding-top: 10%;
         width: 60%
     }
     .rotary-member img, .member-header img {
@@ -177,6 +181,11 @@ board director = Conselho Diretor
     }
 }
 /* NOTEBOOK*/
+@media (min-width: 1024px){
+    .board-of-directors {
+        padding-top: 0;
+    }
+}
 @media (min-width: 1280px) {
     .board-of-directors-content {
         width: 55%
