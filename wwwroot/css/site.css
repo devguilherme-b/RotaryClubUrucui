@@ -252,6 +252,11 @@ html {
         justify-self: flex-start;
         padding: 0
     }
+    .btn-purple {
+        width: 50%;
+        color: var(--white);
+        background-color: var(--purple)
+    }
     .btn-responsive-contribute {
         padding: 1.5% 3%;
         font-size: 1.3em;
