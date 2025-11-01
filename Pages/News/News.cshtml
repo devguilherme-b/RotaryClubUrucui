@@ -1,0 +1,27 @@
+﻿@page "/noticias"
+@model RotaryClubUrucui.Pages.News.NewsModel
+@{
+    ViewData["Title"] = "Blog do Rotary";
+}
+
+<div class="blog-page" id="noticias">
+    <h1 class="text-center">Blog do Rotary</h1>
+
+    <p class="text-center"> 
+        Fique por dentro das últimas notícias e atualizações do Rotary Club de Uruçuí. Aqui você encontrará ações sociais, eventos e histórias inspiradoras que refletem o impacto positivo que estamos fazendo em nossa comunidade.
+    </p>
+
+    <div class="new-container">
+        @foreach (var noticia in Model.Noticias)
+        {
+            <div class="card">
+                <img src="@noticia.ImageUrl" class="card-img-top" alt="@noticia.Title" />
+                <div class="card-body">
+                    <h5>@noticia.Title</h5>
+                    <p>@noticia.Subtitle.Substring(0, Math.Min(noticia.Subtitle.Length, 120))...</p>
+                    <a class="btn btn-primary" asp-page="/News/NewsDetails" asp-route-id="@noticia.Id">Ler mais</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
