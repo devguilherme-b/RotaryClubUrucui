@@ -1,4 +1,46 @@
-﻿// Função para controlar velocidade de abertura do details
+﻿// Share content using Web Share API
+function shareContent(elementId) {
+    const botao = document.getElementById(elementId);
+    botao.addEventListener("click", async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: "Rotary Club em ação",
+                    text: "Vale a pena conferir o que o Rotary Club de Uruçuí preparou!\nAcesse aqui: ",
+                    url: window.location.href,
+                });
+            } catch {
+                alert("Erro ao compartilhar.");
+            }
+        } else {
+            alert("O compartilhamento nativo não é suportado neste navegador.");
+        }
+    });
+}
+
+/**
+ *  Copy any content.
+ * @param {any} elementOrText
+ */
+function copyToClipboard(elementOrText) {
+    let contentToCopy = '';
+
+    const element = document.getElementById(elementOrText);
+    if (element) {
+        contentToCopy = element.innerText || element.value || '';
+    } else {
+        contentToCopy = elementOrText;
+    }
+    navigator.clipboard.writeText(contentToCopy)
+        .then(() => {
+            alert("Conteúdo copiado com sucesso!");
+        })
+        .catch(err => {
+            alert("Erro ao copiar o conteúdo: " + err);
+        });
+}
+
+// Accordion animation for agenda months
 document.querySelectorAll("details").forEach((el) => {
     el.addEventListener("toggle", () => {
         const content = el.querySelector(".agenda-month-content");
@@ -14,18 +56,9 @@ document.querySelectorAll("details").forEach((el) => {
     });
 });
 
-// Função para copiar textos
-function copyToClipboard(elementId) {
-    var text = document.getElementById(elementId).innerText;
-    navigator.clipboard.writeText(text).then(function () {
-        alert("Conteúdo copiado com sucesso.");
-    }, function (err) {
-        alert('Erro ao copiar o conteúdo: ', err);
-    });
-}
 
 
-// Função para gerar o campo EMV
+// Generate payload PIX and QR Code
 function emv(id, value) {
     const len = value.length.toString().padStart(2, '0');
     return id + len + value;

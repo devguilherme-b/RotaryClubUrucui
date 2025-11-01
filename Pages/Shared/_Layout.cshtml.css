@@ -134,6 +134,10 @@ header {
 
 /* Mobiles */
 @media(max-width: 575px) {
+
+    .navbar-expand-sm .navbar-collapse {
+        font-size: xx-small;
+    }
     .navbar-nav[b-cn3gpfjfir] {
         align-items: center;
         gap: 10px;
