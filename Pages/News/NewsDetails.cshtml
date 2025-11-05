@@ -6,11 +6,12 @@
 
 @if (Model.Noticia != null)
 {
-    <img class="news-details-img" src="@Model.Noticia.ImageUrl" alt="@Model.Noticia.Title" />
+    <img class="news-details-img element-for-mobile" src="@Model.Noticia.ImageUrl" alt="@Model.Noticia.Title" />
     <div class="news-details-container">
+        <img class="news-details-img element-for-tablet-and-desktop" src="@Model.Noticia.ImageUrl" alt="@Model.Noticia.Title" />
         <div class="news-details">
             <h1 class="news-details-title">@Model.Noticia.Title</h1>
-            <p>@Model.Noticia.Subtitle</p>
+            <h5>@Model.Noticia.Subtitle</h5>
             <div class="share-content">
                 <a class="share-content-option" href="https://api.whatsapp.com/send?text=Vale%20a%20pena%20conferir%20o%20que%20o%20Rotary%20Club%20de%20Uru%C3%A7u%C3%AD%20preparou%21.%20Acesse%20aqui:%20@Model.CurrencyUrl">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -34,9 +35,11 @@
             }
             <img class="news-details-img-text" src="@Model.Noticia.ImageUrl" alt="@Model.Noticia.Title" />
         </div>
+        <a data-aos="fade-up" class="btn btn-primary" asp-page="/News/News" asp-fragment="noticias">VOLTAR PARA AS NOTICIAS</a>
     </div>
 }
 else
 {
     <p>Notícia não encontrada.</p>
+    <a data-aos="fade-up" class="btn btn-primary" asp-page="/News/News" asp-fragment="noticias">VOLTAR PARA AS NOTICIAS</a>
 }
