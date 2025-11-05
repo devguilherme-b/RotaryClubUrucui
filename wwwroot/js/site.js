@@ -1,21 +1,16 @@
 ﻿// Share content using Web Share API
-function shareContent(elementId) {
-    const botao = document.getElementById(elementId);
-    botao.addEventListener("click", async () => {
-        if (navigator.share) {
-            try {
-                await navigator.share({
-                    title: "Rotary Club em ação",
-                    text: "Vale a pena conferir o que o Rotary Club de Uruçuí preparou!\nAcesse aqui: ",
-                    url: window.location.href,
-                });
-            } catch {
-                alert("Erro ao compartilhar.");
-            }
-        } else {
-            alert("O compartilhamento nativo não é suportado neste navegador.");
-        }
-    });
+function shareContent() {
+    if (navigator.share) {
+        navigator.share({
+            title: "Rotary Club em ação",
+            text: "Vale a pena conferir o que o Rotary Club de Uruçuí preparou!\nAcesse aqui: ",
+            url: window.location.href,
+        }).catch(() => {
+            alert("Erro ao compartilhar.");
+        });
+    } else {
+        alert("O compartilhamento nativo não é suportado neste navegador.");
+    }
 }
 
 /**

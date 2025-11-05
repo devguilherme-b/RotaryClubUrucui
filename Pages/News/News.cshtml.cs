@@ -36,7 +36,8 @@ namespace RotaryClubUrucui.Pages.News
                     Title = "Nenhuma notícia encontrada",
                     Subtitle = "Por favor, adicione notícias ao arquivo noticias.json",
                     Paragraphs = new List<string> { "Nenhum conteúdo disponível no momento." },
-                    ImageUrl = "/images/default-news.jpg"
+                    ImageUrl = "/images/default-news.jpg",
+                    Images = new()
                 }
             };
         }
@@ -51,4 +52,5 @@ public class Noticia
     public List<string> Paragraphs { get; set; } = new();
     [JsonPropertyName("image")]
     public string ImageUrl { get; set; } = string.Empty;
+    public List<string> Images { get; set; } = new();
 }

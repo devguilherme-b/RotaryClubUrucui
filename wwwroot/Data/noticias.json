@@ -9,19 +9,44 @@
       "A cerimônia de entrega dos kits contou com a presença de autoridades locais, membros do Rotary e representantes das escolas beneficiadas. As crianças expressaram sua gratidão e entusiasmo ao receber os materiais.",
       "O Rotary reafirma seu compromisso com a educação e o desenvolvimento social, planejando futuras ações para continuar apoiando a comunidade."
     ],
-    "image": "/Media/Imgs/BLOG-ENTREGA-DE-KITS-ESCOLARES.jpg"
+    "image": "/Media/Imgs/BLOG-ENTREGA-DE-KITS-ESCOLARES.jpg",
+    "images": [
+      "/Media/Imgs/BLOG-ENTREGA-DE-KITS-ESCOLARES.jpg",
+      "/Media/Imgs/NewsById/1/BLOG-ENTREGA-DE-KITS-ESCOLARES-2.jpg",
+      "/Media/Imgs/NewsById/1/BLOG-ENTREGA-DE-KITS-ESCOLARES-3.jpg",
+      "/Media/Imgs/NewsById/1/BLOG-ENTREGA-DE-KITS-ESCOLARES-4.jpg",
+      "/Media/Imgs/NewsById/1/BLOG-ENTREGA-DE-KITS-ESCOLARES-5.jpg",
+      "/Media/Imgs/NewsById/1/BLOG-ENTREGA-DE-KITS-ESCOLARES-6.jpg",
+      "/Media/Imgs/NewsById/1/BLOG-ENTREGA-DE-KITS-ESCOLARES-7.jpg",
+      "/Media/Imgs/NewsById/1/BLOG-ENTREGA-DE-KITS-ESCOLARES-8.jpg",
+      "/Media/Imgs/NewsById/1/BLOG-ENTREGA-DE-KITS-ESCOLARES-9.jpg",
+      "/Media/Imgs/NewsById/1/BLOG-ENTREGA-DE-KITS-ESCOLARES-10.jpg"
+    ]
   },
   {
     "id": 2,
     "title": "Solidariedade em ação no Bingo do Rotary",
     "subtitle": "O Bingo - Rodadas do Bem contou com grande participação da comunidade e reforçou o compromisso do Rotary em multiplicar sorrisos e apoar quem precisa.",
-    "paragraphs" : [
+    "paragraphs": [
       "O Rotary Club de Uruçuí promoveu um evento beneficente, o Bingo - Rodadas do Bem, que reuniu a comunidade local em prol de uma causa nobre. O evento teve como objetivo arrecadar fundos para apoiar projetos sociais desenvolvidos pelo clube.",
       "Com uma atmosfera alegre e descontraída, o bingo contou com a participação de diversas famílias e amigos, que se divertiram enquanto contribuíam para o bem-estar da comunidade. Prêmios variados foram sorteados, incentivando a participação ativa dos presentes.",
       "A iniciativa foi um sucesso, superando as expectativas em termos de arrecadação e engajamento. O Rotary agradece a todos que participaram e colaboraram para o sucesso do evento, reforçando seu compromisso com a solidariedade e o apoio às causas sociais.",
       "Os recursos obtidos serão destinados a projetos que visam melhorar a qualidade de vida das pessoas atendidas pelo Rotary em Uruçuí."
     ],
-    "image": "/Media/Imgs/BLOG-BINGO-DO-ROTARY.jpg"
+    "image": "/Media/Imgs/BLOG-BINGO-DO-ROTARY.jpg",
+    "images": [
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY.jpg",
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-2.jpg",
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-3.jpg",
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-4.jpg",
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-5.jpg",
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-6.jpg",
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-7.jpg",
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-8.jpg",
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-9.jpg",
+      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-10.jpg"
+
+    ]
   },
   {
     "id": 3,
@@ -33,6 +58,10 @@
       "A iniciativa reforça o compromisso do Rotary com a educação e o desenvolvimento dos jovens, buscando ampliar suas oportunidades de acesso ao ensino superior. A parceria com a Unicesumar fortalece ainda mais esse propósito, unindo esforços para promover a excelência acadêmica na região.",
       "Os participantes expressaram entusiasmo e gratidão pela oportunidade de aprimorar seus conhecimentos e se preparar melhor para o ENEM."
     ],
-    "image": "/Media/Imgs/BLOG-PARCERIA-COM-UNICESUMAR.jpg"
+    "image": "/Media/Imgs/BLOG-PARCERIA-COM-UNICESUMAR.jpg",
+    "images": [
+      "/Media/Imgs/BLOG-PARCERIA-COM-UNICESUMAR.jpg",
+      "/Media/Imgs/BLOG-PARCERIA-COM-UNICESUMAR-2.jpg"
+    ]
   }
 ]
