@@ -35,17 +35,16 @@
     ],
     "image": "/Media/Imgs/BLOG-BINGO-DO-ROTARY.jpg",
     "images": [
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY.jpg",
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-2.jpg",
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-3.jpg",
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-4.jpg",
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-5.jpg",
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-6.jpg",
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-7.jpg",
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-8.jpg",
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-9.jpg",
-      "/Media/Imgs/BLOG-BINGO-DO-ROTARY-10.jpg"
-
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY.jpg",
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY-2.jpg",
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY-3.jpg",
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY-4.jpg",
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY-5.jpg",
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY-6.jpg",
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY-7.jpg",
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY-8.jpg",
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY-9.jpg",
+      "/Media/Imgs/NewsById/2/BLOG-BINGO-DO-ROTARY-10.jpg"
     ]
   },
   {
@@ -61,7 +60,15 @@
     "image": "/Media/Imgs/BLOG-PARCERIA-COM-UNICESUMAR.jpg",
     "images": [
       "/Media/Imgs/BLOG-PARCERIA-COM-UNICESUMAR.jpg",
-      "/Media/Imgs/BLOG-PARCERIA-COM-UNICESUMAR-2.jpg"
+      "/Media/Imgs/NewsById/3/BLOG-PARCERIA-COM-UNICESUMAR-2.jpg",
+      "/Media/Imgs/NewsById/3/BLOG-PARCERIA-COM-UNICESUMAR-3.jpg",
+      "/Media/Imgs/NewsById/3/BLOG-PARCERIA-COM-UNICESUMAR-4.jpg",
+      "/Media/Imgs/NewsById/3/BLOG-PARCERIA-COM-UNICESUMAR-5.jpg",
+      "/Media/Imgs/NewsById/3/BLOG-PARCERIA-COM-UNICESUMAR-6.jpg",
+      "/Media/Imgs/NewsById/3/BLOG-PARCERIA-COM-UNICESUMAR-7.jpg",
+      "/Media/Imgs/NewsById/3/BLOG-PARCERIA-COM-UNICESUMAR-8.jpg",
+      "/Media/Imgs/NewsById/3/BLOG-PARCERIA-COM-UNICESUMAR-9.jpg"
+
     ]
   }
 ]

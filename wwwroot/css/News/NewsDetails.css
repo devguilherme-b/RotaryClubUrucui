@@ -1,4 +1,8 @@
-﻿.news-details-img {
+﻿.img-error{
+    width: 30%;
+    filter: saturate(0)
+}
+.news-details-img {
     width: 100%;
     height: auto;
 }

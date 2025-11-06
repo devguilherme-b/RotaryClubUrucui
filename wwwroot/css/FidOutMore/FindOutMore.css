@@ -83,19 +83,17 @@
 
 @media (min-width: 768px) {
     .find-out-more {
-        padding-top: 0
+        padding-top: 2%
     }
     .find-out-more-content {
         width: 60%
     }
-    .find-out-more-content .btn {
+    .find-out-more-content .btn, .find-out-more-img-top {
         width: 70%;
     }
 
     .find-out-more-img-top {
-        aspect-ratio: 16 / 9;
-        object-fit: cover; 
-        object-position: top;
+        border-radius: 20px
     }
 }
 
@@ -111,12 +109,17 @@
     .find-out-more-content {
         width: 55%
     }
-    .find-out-more-content .btn {
+    .find-out-more-content .btn, .find-out-more-img-top {
         width: 50%;
     }
+
 }
 
 @media (min-width: 1440px) {
+    .find-out-more-content {
+        width: 50%
+    }
+
     .find-out-more-content .btn {
         width: 40%;
     }

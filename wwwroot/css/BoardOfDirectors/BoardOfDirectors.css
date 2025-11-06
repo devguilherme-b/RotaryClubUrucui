@@ -157,6 +157,13 @@ board director = Conselho Diretor
 
 /* TABLET */
 @media (min-width: 610px) {
+    .board-of-directors-content {
+        width: 70%;
+        margin: 10% 0% 0% 0%;
+    }
+    .board-of-directors .btn-responsive-contribute {
+        margin: 4em 0em;
+    }
     .board-director {
         margin: 13% 0%
     }

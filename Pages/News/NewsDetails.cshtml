@@ -48,6 +48,9 @@
 }
 else
 {
-    <p>Notícia não encontrada.</p>
-    <a data-aos="fade-up" class="btn btn-primary" asp-page="/News/News" asp-fragment="noticias">VOLTAR PARA AS NOTICIAS</a>
+    <div class="news-details-container">
+        <h1 data-aos="fade-up">Notícia não encontrada. :(</h1>
+        <img data-aos="fade-up" class="img-error" src="~/Media/Imgs/BLUE-LOGO-ROTARY-CLUB-URUÇUÍ.png" alt="Logo Rotary Club de Uruçuí" />
+        <a data-aos="fade-up" class="btn btn-primary" asp-page="/News/News" asp-fragment="noticias">VOLTAR PARA AS NOTÍCIAS</a>
+    </div>
 }

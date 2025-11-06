@@ -135,21 +135,27 @@ header {
 /* Mobiles */
 @media(max-width: 575px) {
 
-    .navbar-expand-sm .navbar-collapse {
-        font-size: xx-small;
-    }
     .navbar-nav[b-cn3gpfjfir] {
         align-items: center;
         gap: 10px;
     }
     .navbar-nav {
-        align-items: center;
+        font-size: xx-small;
         font-size: large;
+        align-items: center;
         text-align: center;
         justify-items: self-start;
         font-weight: 700;
         padding-right: 0;
         padding-left: 0;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 576px) {
+    .navbar-expand-sm .navbar-nav {
+        flex-direction: row;
+        font-size: x-small;
     }
 }
 
@@ -185,6 +191,10 @@ header {
     }
 }
 @media (min-width: 769px) {
+    .navbar-expand-sm .navbar-nav {
+        flex-direction: row;
+        font-size: medium;
+    }
     header {
         padding: 7px 20px;
     }
