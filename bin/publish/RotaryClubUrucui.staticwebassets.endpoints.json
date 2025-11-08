@@ -3,51 +3,6 @@
   "ManifestType": "Publish",
   "Endpoints": [
     {
-      "Route": "Data/noticias.ge4qhz4uqq.json",
-      "AssetFile": "Data/noticias.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5908"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yHXk3qp05HQXWZbpV80AiXDbwaNxnbj0QtIn7qxwSDs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 06 Nov 2025 14:41:58 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ge4qhz4uqq"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-yHXk3qp05HQXWZbpV80AiXDbwaNxnbj0QtIn7qxwSDs="
-        },
-        {
-          "Name": "label",
-          "Value": "Data/noticias.json"
-        }
-      ]
-    },
-    {
       "Route": "Data/noticias.json",
       "AssetFile": "Data/noticias.json",
       "Selectors": [],
@@ -62,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5908"
+          "Value": "5897"
         },
         {
           "Name": "Content-Type",
@@ -70,17 +25,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yHXk3qp05HQXWZbpV80AiXDbwaNxnbj0QtIn7qxwSDs=\""
+          "Value": "\"ICA0vR7/7CgwSe/76Pvb9IuLp7AoG34g/hJwqyt+IHs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Nov 2025 14:41:58 GMT"
+          "Value": "Sat, 08 Nov 2025 22:01:02 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-yHXk3qp05HQXWZbpV80AiXDbwaNxnbj0QtIn7qxwSDs="
+          "Value": "sha256-ICA0vR7/7CgwSe/76Pvb9IuLp7AoG34g/hJwqyt+IHs="
+        }
+      ]
+    },
+    {
+      "Route": "Data/noticias.kv3iwbt1ja.json",
+      "AssetFile": "Data/noticias.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5897"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ICA0vR7/7CgwSe/76Pvb9IuLp7AoG34g/hJwqyt+IHs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Nov 2025 22:01:02 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kv3iwbt1ja"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ICA0vR7/7CgwSe/76Pvb9IuLp7AoG34g/hJwqyt+IHs="
+        },
+        {
+          "Name": "label",
+          "Value": "Data/noticias.json"
         }
       ]
     },
@@ -5851,7 +5851,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 11:44:29 GMT"
+          "Value": "Sat, 08 Nov 2025 15:06:35 GMT"
         }
       ],
       "EndpointProperties": [
@@ -5896,7 +5896,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Nov 2025 11:44:29 GMT"
+          "Value": "Sat, 08 Nov 2025 15:06:35 GMT"
         }
       ],
       "EndpointProperties": [
