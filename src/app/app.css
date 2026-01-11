@@ -1,0 +1,140 @@
+/*GLobal code*/
+.mb-3 {
+    margin-bottom: 0 !important;
+}
+
+.pb-3 {
+    padding-bottom: 0;
+}
+
+ul {
+    list-style:none;
+    padding:0
+}
+.nav-footer-item p, .credits-for-developer a {
+    color: var(--yellow)
+}
+
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .container-edited {
+        margin-top: calc(100vh / 10)
+    }
+
+    .footer .nav-link {
+        padding: 0 1rem;
+    }      
+    .footer-as-secondary-menu {
+        flex-direction: column;
+    }
+}
+
+/* Mobiles */
+@media(max-width: 575px) {
+
+    .navbar-nav[b-cn3gpfjfir] {
+        align-items: center;
+        gap: 10px;
+    }
+    .navbar-nav {
+        font-size: xx-small;
+        font-size: large;
+        align-items: center;
+        text-align: center;
+        justify-items: self-start;
+        font-weight: 700;
+        padding-right: 0;
+        padding-left: 0;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 576px) {
+    .navbar-expand-sm .navbar-nav {
+        flex-direction: row;
+        font-size: x-small;
+    }
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+    .container-edited {
+        margin-top: calc(100vh / 10)
+    }
+
+    .credits-for-developer, .footer .container p {
+        padding: 3rem 0
+    }
+
+    .footer .nav-link {
+        padding: 0 1rem;
+    }
+    .footer-logo{
+        padding: 1rem 0 3rem 0
+    }
+
+    .nav-footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    }
+    .nav-footer-item {
+        all: unset;
+        text-align: center;
+    }
+    
+    .footer-as-secondary-menu {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media (min-width: 769px) {
+    .navbar-expand-sm .navbar-nav {
+        flex-direction: row;
+        font-size: medium;
+    }
+    header {
+        padding: 7px 20px;
+    }
+
+    .footer .nav-link {
+        padding: 0 1rem;
+    }
+    .nav-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .footer-as-secondary-menu {
+        flex-direction: row;
+    }
+}
+
+/* DESKTOPS */
+@media (min-width: 1024px) {
+    .nav-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+@media (min-width: 1280px) {
+    .footer-as-secondary-menu {
+        justify-content: center;
+        flex-direction: row;
+    }
+    header {
+        padding: 7px 20px;
+    }
+
+}
+@media (min-width: 1280px) {
+    .footer-as-secondary-menu {
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    header {
+        padding: 7px 70px;
+    }
+}
