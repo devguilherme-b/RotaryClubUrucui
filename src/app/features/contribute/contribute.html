@@ -15,10 +15,18 @@
                     Copiar chave PIX!
                 </button>
             </div>
-            <div class="contribute-options">
+            <!-- <div class="contribute-options">
                 <a class="donate-btn btn btn-contribute-option" data-valor="01.00" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 1 R$</a>
                 <a class="donate-btn btn btn-contribute-option-active" data-valor="05.00" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 5 R$</a>
                 <a class="donate-btn btn btn-contribute-option" data-valor="10.00" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 10 R$</a>
+            </div> -->
+            <div class="contribute-options">
+                <a class="donate-btn btn btn-contribute-option" (click)="selecionarValor('01.00')" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 1 R$</a>
+                <a class="donate-btn btn btn-contribute-option-active" (click)="selecionarValor('05.00')" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 5 R$</a>
+                <a class="donate-btn btn btn-contribute-option" (click)="selecionarValor('10.00')" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 10 R$</a>
             </div>
         </div>
         <div data-aos="fade-left" class="contribute-right">
@@ -33,5 +41,47 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- ESTE CONTEÚDO SÓ APARECE QUANDO O USUÁRIO CLICA EM DOAR ALGUM VALOR-->
+<div class="offcanvas-customized offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">     
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small">
+        <div class="section-topic">
+            <img src="assets/Imgs/ROTARY-RODA-DE-TREM.png" alt="Imagem da endrenagem da logo do rotary club" />
+            <h1>Instruções para doar via Pix</h1>
+        </div>
+        <ol>
+            <li>Acesse seu app de pagamentos.</li>
+            <li>Escolha pagar via pix.</li>
+            <li>Cole o código abaixo</li>
+        </ol>
+
+        <div class="false-btn-payment-code" (click)="copy('pixTexto')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+            </svg>
+            <div>
+                <!-- <p id="pixTexto"></p> -->
+                <p #pixTexto></p>
+            </div>
+        </div>
+
+        <!-- <div id="qrContainer"></div>  -->
+        <div #qrContainer></div>
+
+        <ul>
+            <li>Ou aponte a câmera para o Qr Code acima.</li>
+        </ul>
+        
+        <button type="button" class="btn btn-success" (click)="copy('pixTexto')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+            </svg>
+            Copiar código Pix
+        </button>
     </div>
 </div>
