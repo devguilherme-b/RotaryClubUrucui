@@ -1,0 +1,204 @@
+/* 
+board of director = Diretoria
+board director = Conselho Diretor
+*/
+
+.board-of-directors {
+    padding-top: 10%;
+    margin-top: 8%;
+    width: 100vw;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, var(--green), var(--white) 10%, var(--white));
+}
+
+.board-of-directors, .rotary-member, .rotary-member-content, .member-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rotary-member img, .member-header img{
+    border-radius: 50%
+}
+.rotary-member img:hover, .member-header img:hover{
+    filter: drop-shadow(4px 2px 1px var(--yellow))
+}
+.board-of-directors h1, .board-director {
+    color: var(--dark-blue)
+}
+.board-director, .board-director-position{
+    background-color: var(--dark-blue)
+}
+.board-director, .commissions{
+    color: var(--white) !important;
+    padding: 0.5em
+}
+.commissions, .commissions-position {
+    background-color: var(--green)
+}
+.board-director-position, .commissions-position {
+    display: inline-block;
+    color: var(--white);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.rotary-structure{
+    width: 100%;
+    border-radius: 8px;
+}
+.board-of-directors h1 {
+    font-weight: 700
+}
+.rotary-member {
+    margin: 5% 0%
+}
+.member-header {
+    justify-content: left;
+}
+.member-header div h5{
+    font-weight: 600
+}
+.board-of-directors-content {
+    color: var(--gray);
+}
+.board-director-position {
+    padding: 1% 4%
+}
+.commissions-position{
+    padding: 3px 9px
+}
+.rotary-member-content {
+    flex-direction: column;
+}
+.member-description{
+    text-align:justify
+}
+
+.rotary-left-icon {
+    animation: 2s LeftInifiteRotation ease-in-out infinite
+}
+.rotary-right-icon {
+    animation: 2s RightInifiteRotation ease-in-out infinite
+}
+
+.board-of-directors .btn-yellow {
+    margin-bottom: 10%
+}
+/* ANIMATIONS */
+@keyframes LeftInifiteRotation {
+    0% {
+        transform: rotateZ(60deg)
+    }
+
+    50% {
+        transform: rotateZ(90deg)
+    }
+
+    100% {
+        transform: rotateZ(60deg)
+    }
+}
+@keyframes RightInifiteRotation {
+    0% {
+        transform: scaleX(-1) rotateZ(60deg)
+    }
+
+    50% {
+        transform: scaleX(-1) rotateZ(80deg)
+    }
+
+    100% {
+        transform: scaleX(-1) rotateZ(60deg)
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .board-director {
+        margin: 15% 0%
+    }
+    .board-of-directors-content {
+        width: 75%;
+        margin: 10% 0% 5% 0%;
+    }
+
+    .rotary-member img, .member-header img {
+        width: 30%;
+        padding-right: 5%
+    }
+
+    .member-description {
+        width: 85%
+    }
+
+    .commissions-position{
+        text-align:justify;
+        padding: 5px 15px
+    }
+}
+@media (min-width: 481px) {
+    .board-director {
+        margin: 15% 0%
+    }
+    .board-of-directors-content {
+        width: 70%;
+        margin: 10% 0% 14% 0%;
+    }
+    .rotary-member img, .member-header img {
+        width: 30%;
+        padding-right: 5%
+    }
+    .member-description {
+        width: 85%
+    }
+    .board-of-directors-content{
+        width: 80%
+    }
+}
+
+/* TABLET */
+@media (min-width: 610px) {
+    .board-of-directors-content {
+        width: 70%;
+        margin: 10% 0% 0% 0%;
+    }
+    .board-of-directors .btn-responsive-contribute {
+        margin: 4em 0em;
+    }
+    .board-director {
+        margin: 13% 0%
+    }
+
+    .rotary-member{
+        align-items:flex-start
+    }
+}
+
+@media (min-width: 768px) {
+    .board-of-directors-content {
+        width: 60%
+    }
+    .rotary-member img, .member-header img {
+        width: 35%;
+    }
+    .member-description, .member-header {
+        width: 100%
+    }
+    .member-header {
+        justify-content: left
+    }
+}
+/* NOTEBOOK*/
+@media (min-width: 1024px){
+    .board-of-directors {
+        padding-top: 0;
+    }
+}
+@media (min-width: 1280px) {
+    .board-of-directors-content {
+        width: 55%
+    }
+    .rotary-member {
+        align-items: center
+    }
+}

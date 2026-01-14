@@ -6,8 +6,8 @@
     background-color: var(--green);
     color: var(--white);
     padding-top: 3%;
+    margin-top: 5% !important;
     padding-bottom: 10%;    
-    margin-top: 5% !important
 }
 
 .home-photo {
