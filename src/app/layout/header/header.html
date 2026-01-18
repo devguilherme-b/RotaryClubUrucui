@@ -2,7 +2,7 @@
   <h6 data-aos="fade-up" class="rotary-year">ANO ROTÁRIO 2025 - 2026 - URUÇUÍ</h6>
   <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3">
     <div class="container">
-      <a class="navbar-brand text-light" href="">
+      <a class="navbar-brand text-light" routerLink="/">
         <img src="assets/Imgs/WHITE-LOGO-ROTARY-CLUB-URUÇUÍ.png" alt="Logo da Rotary Club de Uruçuí." height="50" />
       </a>
       <button
@@ -46,8 +46,7 @@
       </button>
       <div
         class="navbar-collapse collapse d-sm-inline-flex justify-content-between"
-        id="navbarSupportedContent"
-      >
+        id="navbarSupportedContent">
         <ul class="navbar-nav flex-grow-1 justify-content-center">
           <li class="nav-item-edited">
             <a (click)="scrollTo('app-home')" class="nav-link text-light">Início</a>
@@ -65,7 +64,7 @@
                 <a class="nav-link text-light" (click)="scrollTo('app-about')">Quem somos</a>
               </li>
               <li class="nav-item-edited">
-                <a class="nav-link text-light" (click)="scrollTo('app-about')">Diretoria</a>
+                <a class="nav-link text-light" routerLink="/diretoria">Diretoria</a>
               </li>
             </ul>
           </li>

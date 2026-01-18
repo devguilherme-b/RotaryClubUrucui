@@ -1,3 +1,7 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+@if(ishome){
+    <app-header></app-header>
+}@else{
+    <app-subheading></app-subheading>
+}
+<router-outlet />
 <app-footer></app-footer>

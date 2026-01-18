@@ -26,31 +26,26 @@ header {
 }
 
 .nav-item-edited {
-    align-content: center
+    align-content: center;
+    list-style: none;
+    padding: 1%;
 }
 .nav-item-edited:hover {
     align-content: center;
     background-color: var(--purple)
 }
-.nav-item a {
+.nav-item-edited a {
     color: var(--white);
     text-decoration: none
 }
-
-.nav-item a:hover{
+.nav-item-edited a:hover {
     background-color: var(--purple);
     color: var(--white)
 }
 
-.dropdown-menu {
-    background-color: var(--green);
-    padding:5px
-}
-
 /* Mobiles */
 @media(max-width: 575px) {
-
-    .navbar-nav[b-cn3gpfjfir] {
+    .navbar-nav{
         align-items: center;
         gap: 10px;
     }
@@ -67,7 +62,7 @@ header {
     }
 }
 @media (min-width: 576px) {
-    .navbar-expand-sm .navbar-nav {
+     .navbar-nav {
         flex-direction: row;
         font-size: x-small;
     }
@@ -75,7 +70,7 @@ header {
 
 /* TABLETS */
 @media (min-width: 769px) {
-    .navbar-expand-sm .navbar-nav {
+    .navbar-nav {
         flex-direction: row;
         font-size: medium;
     }
