@@ -4,6 +4,7 @@ import { Header } from './layout/header/header';
 import { Subheading } from './layout/subheading/subheading';
 import { Footer } from './layout/footer/footer';
 import { filter } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,7 @@ import { filter } from 'rxjs';
 export class App{ 
   ishome = true;
 
-  constructor (private router: Router){
+  constructor (private router: Router, private route: ActivatedRoute){
     this.router.events.subscribe(event => {
       if(event instanceof NavigationEnd){
         window.scrollTo(0,0);
@@ -35,5 +36,23 @@ export class App{
     )).subscribe(() => {
       this.ishome = this.router.url === '/';
     })
+  }
+
+  ngAfterViewInit() {
+    this.route.fragment.subscribe(fragment => {
+    if (!fragment) return;
+
+    requestAnimationFrame(() => {
+      const el = document.getElementById(fragment);
+
+      if (!el) return;
+
+      el.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest'
+      });
+    });
+  });
   }
 }

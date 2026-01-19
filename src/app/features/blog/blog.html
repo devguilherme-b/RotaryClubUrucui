@@ -9,7 +9,7 @@
     <swiper-container data-aos="fade-up" space-between="30" slides-per-view="auto" pagination="true"
                       pagination-clickable="true" centered-slide="true" loop="true">
         <swiper-slide>
-            <a class="blog-card" asp-page="/News/NewsDetails" asp-route-id="4">
+            <a class="blog-card" [routerLink]="['/noticias', 1]">
                 <img src="assets/Imgs/PROJETO-LETRAS-MAGICAS.png" alt="Rotary Club de Uruçuí entregando Kits Escolares no Itajacy Pacheco Martins" />
                 <div class="blog-card-content">
                     <h6>Rotary lança novo projeto de alfabetização.</h6>
@@ -19,7 +19,7 @@
            </a>
         </swiper-slide>
         <swiper-slide>
-            <a class="blog-card" asp-page="/News/NewsDetails" asp-route-id="1">
+            <a class="blog-card" [routerLink]="['/noticias', 2]">
                 <img src="assets/Imgs/BLOG-ENTREGA-DE-KITS-ESCOLARES.jpg" alt="Rotary Club de Uruçuí entregando Kits Escolares no Itajacy Pacheco Martins" />
                 <div class="blog-card-content">
                     <h6>Rotary realiza doação de kits escolares</h6>
@@ -29,7 +29,7 @@
            </a>
         </swiper-slide>
         <swiper-slide>
-            <a class="blog-card" asp-page="/News/NewsDetails" asp-route-id="2">
+            <a class="blog-card" [routerLink]="['/noticias', 3]">
                 <img src="assets/Imgs/BLOG-BINGO-DO-ROTARY.jpg" alt="Rotary Club realizando Bingo Beneficente" />
                 <div class="blog-card-content">
                     <h6>Solidariedade em ação no Bingo do Rotary</h6>
@@ -39,7 +39,7 @@
             </a>
         </swiper-slide>
         <swiper-slide>
-            <a class="blog-card" asp-page="/News/NewsDetails" asp-route-id="3">
+            <a class="blog-card" [routerLink]="['/noticias', 4]">
                 <img src="assets/Imgs/BLOG-PARCERIA-COM-UNICESUMAR.jpg" alt="Rotary Club de Uruçuí realizando parceria com a Unicesumar - Polo de Floriano - Piauí" />
                 <div class="blog-card-content">
                     <h6>Rotary promove ação educativa com foco no ENEM</h6>
@@ -56,5 +56,5 @@
         </div>
     </swiper-container>
 
-    <a data-aos="fade-up" class="btn btn-purple" asp-page="/News/News">VER TODAS</a>
+    <a data-aos="fade-up" class="btn btn-purple" routerLink="/noticias">VER TODAS</a>
 </div>

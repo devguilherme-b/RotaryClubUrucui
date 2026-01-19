@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-agenda',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './agenda.html',
   styleUrl: './agenda.css'
 })

@@ -4,7 +4,7 @@
       <div class="footer-logo">
         <img
           src="assets/Imgs/WHITE-LOGO-ROTARY-CLUB-URUÇUÍ.png"
-          href=""
+          routerLink="/"
           alt="Logo da Rotary Club de Uruçuí."
           height="90"
         />
@@ -14,10 +14,10 @@
           <p class="nav-link">Sobre</p>
           <ul>
             <li>
-              <a (click)="scrollTo('app-about')" class="nav-link">Quem Somos</a>
+              <a routerLink="/saiba-mais" class="nav-link">Quem Somos</a>
             </li>
             <li>
-              <a (click)="scrollTo('app-about')" class="nav-link">Diretoria</a>
+              <a routerLink="/diretoria" class="nav-link">Diretoria</a>
             </li>
           </ul>
         </div>
@@ -25,13 +25,13 @@
           <p class="nav-link">Ações</p>
           <ul>
             <li>
-              <a (click)="scrollTo('app-projects')" class="nav-link">Projetos</a>
+              <a routerLink="/" fragment="" class="nav-link">Projetos</a>
             </li>
             <li>
-              <a (click)="scrollTo('app-blog')" class="nav-link">Notícias</a>
+              <a routerLink="/noticias" class="nav-link">Notícias</a>
             </li>
             <li>
-              <a (click)="scrollTo('app-agenda')" class="nav-link" >Agenda</a>
+              <a routerLink="/agenda" class="nav-link" >Agenda</a>
             </li>
           </ul>
         </div>
