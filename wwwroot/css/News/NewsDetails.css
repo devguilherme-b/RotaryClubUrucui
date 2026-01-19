@@ -4,7 +4,6 @@
 }
 .news-details-img {
     width: 100%;
-    height: auto;
 }
 
 .news-details-container {
@@ -59,7 +58,7 @@
 }
 
 @media (max-width: 480px) {
-    .news-details, .news-details swiper-container swiper-slide img{
+    .news-details, .news-details swiper-container swiper-slide img {
         width: 70%;
     }
 }

@@ -113,6 +113,7 @@ function gerarQRCode(valor) {
     const payload = gerarPixPayload(chavePix, nome, cidade, valor, txid);
 
     document.getElementById("qrContainer").innerHTML = "";
+    
     new QRCode(document.getElementById("qrContainer"), {
         text: payload,
         width: 200,
