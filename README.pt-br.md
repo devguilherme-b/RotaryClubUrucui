@@ -4,7 +4,7 @@
 
 # Rotary Club Uruçuí - Site Institutional
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-purple)
+![Status](https://img.shields.io/badge/status-em%20migracao%para%angular-purple)
 ![Versão](https://img.shields.io/badge/vers%C3%A3o-1.0-white)
 
 **Autor**: [Guilherme Barbosa](https://github.com/devguilherme-b)
