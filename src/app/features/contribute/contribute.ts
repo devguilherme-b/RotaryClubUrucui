@@ -1,135 +1,72 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { CopyToClipboard } from '../../utils';
-import QRCode from 'qrcodejs';
+import { QRCode } from 'qrcode';
 
 @Component({
   selector: 'app-contribute',
   templateUrl: './contribute.html',
-  styleUrls: ['./contribute.css', './OffCanvasCustomized.css']
+  styleUrls: [
+    './contribute.css',
+    './OffCanvasCustomized.css'
+  ]
 })
 export class Contribute {
-  copy(id: any){
-    CopyToClipboard(id);
+  copy(idElemento: string) {
+    CopyToClipboard(idElemento);
   }
 
-  @ViewChild('qrContainer', { static: false }) qrContainer!: ElementRef;
-  @ViewChild('pixTexto', { static: false }) pixTexto!: ElementRef;
+  //   const chavePix = '52476099000104';
+  //   const nome = 'ROTARY';
+  //   const cidade = 'URUCUI';
 
-  valorSelecionado = '';
+  qrCodeDataUrl: string | null = null; // imagem QR Code em Base64
+  payloadPix: string = '';
 
-  selecionarValor(valor: string): void {
-    this.valorSelecionado = valor;
-
-    // Aguarda o offcanvas ser renderizado
-    setTimeout(() => {
-      this.gerarQRCode();
-    });
+  async gerarQrCode(valor: number): Promise<void> {
+    debugger;
+    this.payloadPix = this.gerarPayloadPix(valor);
+    this.qrCodeDataUrl = await QRCode.toDataURL(this.payloadPix);
   }
 
-  gerarQRCode(): void {
+  // Função para gerar payload Pix
+  private gerarPayloadPix(valor: number): string {
     const chavePix = '52476099000104';
-    const nome = 'ROTARY';
+    const nomeRecebedor = 'ROTARY';
     const cidade = 'URUCUI';
-    const txid = 'TX' + Date.now().toString().slice(-6);
+    const txid = 'TX123';
+    const valorFormatado = valor.toFixed(2);
 
-    const payload = this.gerarPixPayload(
-      chavePix,
-      nome,
-      cidade,
-      this.valorSelecionado,
-      txid
-    );
+    const formatarCampo = (id: string, valor: string) => {
+      const tamanho = valor.length.toString().padStart(2, '0');
+      return `${id}${tamanho}${valor}`;
+    };
 
-    this.qrContainer.nativeElement.innerHTML = '';
+    const payloadSemCRC = '000201' + formatarCampo('26', 
+      formatarCampo('00', 'BR.GOV.BCB.PIX') + 
+      formatarCampo('01', chavePix)) + '52040000' + '5303986' +
+      formatarCampo('54', valorFormatado) + '5802BR' +
+      formatarCampo('59', nomeRecebedor) +
+      formatarCampo('60', cidade) +
+      formatarCampo('62', formatarCampo('05', txid)) + '6304';
 
-    new QRCode(this.qrContainer.nativeElement, {
-      text: payload,
-      width: 200,
-      height: 200,
-      correctLevel: QRCode.CorrectLevel.Q
-    });
-
-    this.pixTexto.nativeElement.innerText = payload;
+    const crc = this.calcularCRC16(payloadSemCRC);
+    return payloadSemCRC + crc;
   }
 
-  // -----------------------------
-  // PIX PAYLOAD
-  // -----------------------------
-
-  private emv(id: string, value: string): string {
-    const len = value.length.toString().padStart(2, '0');
-    return id + len + value;
-  }
-
-  private gerarPixPayload(
-    chavePix: string,
-    nome: string,
-    cidade: string,
-    valor: string = '',
-    txid: string
-  ): string {
-
-    const payloadFormatIndicator = this.emv('00', '01');
-    const pointOfInitiationMethod = valor
-      ? this.emv('01', '12')
-      : this.emv('01', '11');
-
-    const gui = this.emv('00', 'br.gov.bcb.pix');
-    const chave = this.emv('01', chavePix);
-    const txidField = this.emv('02', txid);
-    const merchantAccountInfo = this.emv('26', gui + chave + txidField);
-
-    const merchantCategoryCode = this.emv('52', '0000');
-    const transactionCurrency = this.emv('53', '986');
-    const transactionAmount = valor
-      ? this.emv('54', parseFloat(valor).toFixed(2))
-      : '';
-
-    const countryCode = this.emv('58', 'BR');
-    const merchantName = this.emv('59', nome.substring(0, 25));
-    const merchantCity = this.emv('60', cidade.substring(0, 15));
-    const additionalDataField = this.emv('62', this.emv('05', txid));
-
-    const payloadSemCRC =
-      payloadFormatIndicator +
-      pointOfInitiationMethod +
-      merchantAccountInfo +
-      merchantCategoryCode +
-      transactionCurrency +
-      transactionAmount +
-      countryCode +
-      merchantName +
-      merchantCity +
-      additionalDataField;
-
-    const crc = this.gerarCRC16(payloadSemCRC + '6304');
-    return payloadSemCRC + '6304' + crc;
-  }
-
-  // -----------------------------
-  // CRC16
-  // -----------------------------
-
-  private gerarCRC16(payload: string): string {
-    const polinomio = 0x1021;
-    let resultado = 0xFFFF;
-
+  private calcularCRC16(payload: string): string {
+    let crc = 0xffff;
     for (let i = 0; i < payload.length; i++) {
-      resultado ^= payload.charCodeAt(i) << 8;
-
+      crc ^= payload.charCodeAt(i) << 8;
       for (let j = 0; j < 8; j++) {
-        resultado = (resultado & 0x8000)
-          ? (resultado << 1) ^ polinomio
-          : resultado << 1;
-
-        resultado &= 0xFFFF;
+        if ((crc & 0x8000) !== 0) {
+          crc = (crc << 1) ^ 0x1021;
+        } else {
+          crc <<= 1;
+        }
+        crc &= 0xffff;
       }
     }
 
-    return resultado
-      .toString(16)
-      .toUpperCase()
-      .padStart(4, '0');
+    return crc.toString(16).toUpperCase().padStart(4, '0');
   }
 }
-

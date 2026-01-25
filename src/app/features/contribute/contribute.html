@@ -5,24 +5,39 @@
     <div class="contribute-container">
         <div data-aos="fade-right" class="contribute-left">
             <div class="contribute-pix">
-                <img src="assets/Imgs/PIX-ROTARYCLUB-URUCUI-BR-CODE.png" alt="Br code para realizar doação para o Rotary Club de Uruçuí." />
+                <img src="assets/Imgs/PIX-ROTARYCLUB-URUCUI-BR-CODE.png"
+                    alt="Br code para realizar doação para o Rotary Club de Uruçuí." />
                 <h5>Doe qualquer valor <span class="span-purple">via PIX!</span></h5>
                 <p id="textForToCopy">52.476.099/0001-04</p>
                 <button type="button" class="btn btn-copy-key-pix" (click)="copy('textForToCopy')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-copy" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
                     </svg>
                     Copiar chave PIX!
                 </button>
             </div>
             <div class="contribute-options">
-                <a class="donate-btn btn btn-contribute-option" (click)="selecionarValor('01.00')" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 1 R$</a>
-                <a class="donate-btn btn btn-contribute-option-active" (click)="selecionarValor('05.00')" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 5 R$</a>
-                <a class="donate-btn btn btn-contribute-option" (click)="selecionarValor('10.00')" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">DOAR 10 R$</a>
+                <a class="donate-btn btn btn-contribute-option" (click)="gerarQrCode(01.00)" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasBottom">
+                    DOAR 1 R$
+                </a>
+
+                <a class="donate-btn btn btn-contribute-option-active" (click)="gerarQrCode(05.00)"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">
+                    DOAR 5 R$
+                </a>
+
+                <a class="donate-btn btn btn-contribute-option" (click)="gerarQrCode(10.00)" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasBottom">
+                    DOAR 10 R$
+                </a>
             </div>
+
+            <div id="qrContainer"></div>
+            <p id="pixTexto"></p>
+
         </div>
         <div data-aos="fade-left" class="contribute-right">
             <p>Cada doação, cada gesto de apoio, nos ajuda a levar esperança a quem mais precisa.</p>
@@ -31,8 +46,11 @@
             <div class="contribute-as-partner">
                 <img src="assets/Imgs/ROTARY-RODA-DE-TREM.png" alt="Roda de trem da logo do Rotary Club" />
                 <div>
-                    <p>Sua contribuição pode mudar destinos: doe agora ou torne sua empresa parceira da transformação.</p>
-                    <a href="mailto:rotaryurucui@gmail.com?subject=Proposta%20de%20Parceria%20%E2%80%93%20Via%20site%20do%20Rotary%20Club%20de%20Uru%C3%A7u%C3%AD&body=Ol%C3%A1%2C%20Rotary%20Club%20de%20Uru%C3%A7u%C3%AD!%0D%0A%0D%0AEntrei%20em%20contato%20atrav%C3%A9s%20do%20site%20porque%20tenho%20interesse%20em%20propor%20uma%20parceria.%0D%0A%0D%0ASegue%20abaixo%20um%20breve%20resumo%20da%20proposta%3A%0D%0A%0D%0ANome%3A%0D%0AOrganiza%C3%A7%C3%A3o%20%2F%20Empresa%3A%0D%0ATipo%20de%20parceria%20desejada%3A%0D%0ADescri%C3%A7%C3%A3o%20da%20proposta%3A%0D%0A%0D%0AFico%20%C3%A0%20disposi%C3%A7%C3%A3o%20para%20conversarmos%20melhor.%0D%0A%0D%0AAtenciosamente%2C%0D%0A%5BSeu%20Nome%5D%0D%0A%5BTelefone%20%2F%20E-mail%20para%20contato%5D">SEJA PARCEIRO AQUI</a>
+                    <p>Sua contribuição pode mudar destinos: doe agora ou torne sua empresa parceira da transformação.
+                    </p>
+                    <a
+                        href="mailto:rotaryurucui@gmail.com?subject=Proposta%20de%20Parceria%20%E2%80%93%20Via%20site%20do%20Rotary%20Club%20de%20Uru%C3%A7u%C3%AD&body=Ol%C3%A1%2C%20Rotary%20Club%20de%20Uru%C3%A7u%C3%AD!%0D%0A%0D%0AEntrei%20em%20contato%20atrav%C3%A9s%20do%20site%20porque%20tenho%20interesse%20em%20propor%20uma%20parceria.%0D%0A%0D%0ASegue%20abaixo%20um%20breve%20resumo%20da%20proposta%3A%0D%0A%0D%0ANome%3A%0D%0AOrganiza%C3%A7%C3%A3o%20%2F%20Empresa%3A%0D%0ATipo%20de%20parceria%20desejada%3A%0D%0ADescri%C3%A7%C3%A3o%20da%20proposta%3A%0D%0A%0D%0AFico%20%C3%A0%20disposi%C3%A7%C3%A3o%20para%20conversarmos%20melhor.%0D%0A%0D%0AAtenciosamente%2C%0D%0A%5BSeu%20Nome%5D%0D%0A%5BTelefone%20%2F%20E-mail%20para%20contato%5D">SEJA
+                        PARCEIRO AQUI</a>
                 </div>
             </div>
         </div>
@@ -40,8 +58,9 @@
 </div>
 
 <!-- ESTE CONTEÚDO SÓ APARECE QUANDO O USUÁRIO CLICA EM DOAR ALGUM VALOR-->
-<div class="offcanvas-customized offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-    <div class="offcanvas-header">     
+<div class="offcanvas-customized offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom"
+    aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body small">
@@ -56,25 +75,37 @@
         </ol>
 
         <div class="false-btn-payment-code" (click)="copy('pixTexto')">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
             </svg>
             <div>
-                <!-- <p id="pixTexto"></p> -->
-                <p #pixTexto></p>
+                @if (payloadPix) {
+                    <!-- <p id="pixTexto"></p> -->
+                    <p id="pixTexto">{{payloadPix}}</p>
+                }@else {
+                    <p id="pixTexto">Não há Pix disponível...</p>
+                }
             </div>
         </div>
 
-        <!-- <div id="qrContainer"></div>  -->
-        <div #qrContainer></div>
-
+        <div id="qrContainer">
+            @if (qrCodeDataUrl) {
+                <img [src]="qrCodeDataUrl" alt="QR Code Pix" />
+            }@else {
+                <p>Não há QR Code disponível...</p>
+            }
+        </div>
         <ul>
             <li>Ou aponte a câmera para o Qr Code acima.</li>
         </ul>
-        
+
         <button type="button" class="btn btn-success" (click)="copy('pixTexto')">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
             </svg>
             Copiar código Pix
         </button>

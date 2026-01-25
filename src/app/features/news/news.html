@@ -1,17 +1,21 @@
 <div class="blog-page" id="noticias">
     <h1 class="text-center">Blog do Rotary</h1>
-
-    <p class="text-center"> 
-        Fique por dentro das últimas notícias e atualizações do Rotary Club de Uruçuí. Aqui você encontrará ações sociais, eventos e histórias inspiradoras que refletem o impacto positivo que estamos fazendo em nossa comunidade.
+    <p class="text-center">
+        Fique por dentro das últimas notícias e atualizações do Rotary Club de Uruçuí. Aqui você encontrará ações
+        sociais, eventos e histórias inspiradoras que refletem o impacto positivo que estamos fazendo em nossa
+        comunidade.
     </p>
-
     <div class="new-container">
-        <div class="card" *ngFor="let noticia of noticias">
-            <img [src]="noticia.ImageUrl" class="card-img-top" [alt]="noticia.Title" />
+        @for (noticia of noticias; track $index) {
+        <div class="card">
+            <img class="card-img-top" [src]="noticia.ImageUrl" [alt]="noticia.Title">
             <div class="card-body">
-                <h5>{{noticia.Title}}</h5>
-                <p>{{noticia.Subtitle.substring(0, 120)}}...</p>
-                <a class="btn btn-primary" routerLink="['/noticias', noticia.Id]">Ler mais</a>
+                <h5>{{ noticia.Title }}</h5>
+                <p>{{ noticia.Subtitle.length > 120 ? noticia.Subtitle.substring(0, 120) + '...' : noticia.Subtitle }}
+                </p>
+                <a class="btn btn-primary" [routerLink]="['/noticias', noticia.Id]"> Ler mais </a>
             </div>
+        </div>
+        }
     </div>
 </div>

@@ -6,6 +6,8 @@ import { AgendaPage } from './pages/agenda-page/agenda-page';
 import { FingOutMorePage } from './pages/fing-out-more-page/fing-out-more-page';
 import { BlogPage } from './pages/blog-page/blog-page';
 
+import { NewDetails } from './features/new-details/new-details';
+
 export const routes: Routes = [
     {
         path: '', 
@@ -30,6 +32,6 @@ export const routes: Routes = [
     },
     {
         path: 'noticias/:id', 
-        component: BlogPage
+        component: NewDetails
     }
 ];
