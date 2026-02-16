@@ -1,17 +1,17 @@
-# Imagem base para o runtime do ASP.NET Core
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 8080
-
-# Imagem base para build com o SDK do .NET
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
-COPY . .
-RUN dotnet restore
-RUN dotnet publish -c Release -o /app/publish
-
-# Imagem final
-FROM base AS final
 WORKDIR /app
-COPY --from=build /app/publish .
+
+COPY *.csproj ./
+RUN dotnet restore
+
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /app/out ./
+
+EXPOSE 8080
 ENTRYPOINT ["dotnet", "RotaryClubUrucui.dll"]
